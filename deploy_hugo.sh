@@ -3,4 +3,4 @@
 cd ~/GIT/xp
 git pull
 cd ~/GIT/xp/xp
-hugo build
+hugo
