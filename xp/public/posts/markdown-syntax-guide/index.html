@@ -1,0 +1,2173 @@
+<!doctype html>
+<html
+  lang="fr-fr"
+  data-theme="default">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<title>Markdown Syntax Guide | XP</title>
+
+<meta name="description" content="This is a post which includes all available Markdown syntax." />
+<meta name="keywords" content="markdown" />
+<meta name="author" content="" />
+<meta name="language" content="fr-fr" />
+
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="http://localhost:1313/posts/markdown-syntax-guide/" />
+
+
+
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+
+
+<link rel="manifest" href="/site.webmanifest" />
+<meta property="og:url" content="http://localhost:1313/posts/markdown-syntax-guide/">
+  <meta property="og:site_name" content="XP">
+  <meta property="og:title" content="Markdown Syntax Guide">
+  <meta property="og:description" content="This is a post which includes all available Markdown syntax.">
+  <meta property="og:locale" content="fr_fr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-01-15T10:00:00+08:00">
+    <meta property="article:modified_time" content="2024-01-15T10:00:00+08:00">
+    <meta property="article:tag" content="Markdown">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Markdown Syntax Guide">
+  <meta name="twitter:description" content="This is a post which includes all available Markdown syntax.">
+
+
+  <meta itemprop="name" content="Markdown Syntax Guide">
+  <meta itemprop="description" content="This is a post which includes all available Markdown syntax.">
+  <meta itemprop="datePublished" content="2024-01-15T10:00:00+08:00">
+  <meta itemprop="dateModified" content="2024-01-15T10:00:00+08:00">
+  <meta itemprop="wordCount" content="564">
+  <meta itemprop="keywords" content="Markdown">
+
+
+
+
+
+
+
+<script>
+  window.HUGO_SEARCH_CONFIG = {
+    searchIndexURL: "\"/index.json\""
+  };
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  window.HUGO_GALLERY_CONFIG = {
+    gallery:  false ,
+    lightbox:  false ,
+    galleryOptions: "{}",
+    lightboxOptions: "{}"
+  };
+</script>
+
+
+
+
+  
+    <link rel="stylesheet" href="/css/compiled.css" />
+  
+
+
+
+
+
+  
+    <link rel="stylesheet" href="/css/chroma.css" />
+  
+
+
+
+
+
+
+
+
+
+
+      <script src="/js/main.js"></script>
+
+
+
+          <script src="/js/toc.js" defer></script>
+
+
+
+      <script src="/js/search.js" defer></script>
+
+
+
+      <script src="/js/dock.js" defer></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <script>(function(){const e=localStorage.getItem("theme")||"system",n=localStorage.getItem("colorScheme")||"shadcn";document.documentElement.setAttribute("data-theme",n);function t(){e==="dark"||e==="system"&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.classList.add("dark"):document.documentElement.classList.remove("dark")}t(),e==="system"&&window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",t)})()</script>
+  </head>
+
+<body class="bg-background text-foreground min-h-screen antialiased">
+
+  <main class="mx-auto w-full" style="max-width: 56rem">
+    <div id="reading-progress-bar"
+  class="pointer-events-none fixed top-0 left-0 z-50 h-[3px] w-0
+         bg-gradient-to-r from-primary to-primary/80
+         transition-[width] duration-150 ease-out">
+</div>
+
+<script>
+  (function () {
+    const bar = document.getElementById("reading-progress-bar");
+    if (!bar) return;
+
+    function update() {
+      const scrolled = window.scrollY;
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = total > 0 ? (scrolled / total * 100) + "%" : "0%";
+    }
+
+    let ticking = false;
+    window.addEventListener("scroll", () => {
+      if (!ticking) {
+        requestAnimationFrame(() => { update(); ticking = false; });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    update();
+  })();
+</script>
+
+    <header class=" px-4 py-6">
+  <div class="border-border bg-card/80 flex items-center rounded-xl border px-6 py-4 shadow-sm backdrop-blur-sm">
+    
+    <div class="hidden w-full items-center md:flex md:min-w-0">
+      
+      <div class="flex items-center">
+        
+        <a href="/"
+          class="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full transition-transform duration-200 hover:scale-105"
+          aria-label="XP">
+          <img src="" alt="XP" class="h-full w-full object-cover" />
+        </a>
+        
+      </div>
+
+      
+      <nav class="mx-8 flex flex-1 items-center justify-center min-w-0">
+        <div class="flex items-center space-x-1 flex-wrap justify-center">
+          
+          
+        </div>
+      </nav>
+
+      
+      <div class="flex items-center space-x-2">
+        
+        
+
+        
+        
+<div class="relative">
+  <button id="color-scheme-toggle"
+    class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
+    data-dropdown-type="color-scheme"
+    aria-label="Changer de thème"
+    aria-expanded="false"
+    aria-haspopup="true">
+      <svg class="h-5 w-5 relative z-10" aria-label="Changer de thème" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v6a2 2 0 002 2h4a2 2 0 002-2V5z" />
+</svg>
+</button>
+
+  
+  <div id="color-scheme-dropdown"
+    class="dropdown-menu border-border bg-popover/95 absolute top-12 right-0 z-[60] hidden w-44 rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
+    data-dropdown-type="color-scheme"></div>
+</div>
+
+        
+        
+<div class="relative">
+  <button id="theme-toggle"
+    class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
+    data-dropdown-type="theme"
+    aria-label="Changer de thème"
+    aria-expanded="false"
+    aria-haspopup="true">
+      
+      <svg class="h-5 w-5 sun-icon hidden relative z-10" aria-label="Clair" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+</svg>
+
+      
+      <svg class="h-5 w-5 moon-icon hidden relative z-10" aria-label="Sombre" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+</svg>
+
+      
+      <svg class="h-5 w-5 system-icon hidden relative z-10" aria-label="Système" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+</svg>
+</button>
+
+  
+  <div id="theme-dropdown"
+    class="dropdown-menu border-border bg-popover/95 absolute top-12 right-0 z-[60] hidden w-40 rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
+    data-dropdown-type="theme"><button data-theme="light" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="Clair" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+</svg>
+<span>Clair</span></button><button data-theme="dark" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="Sombre" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+</svg>
+<span>Sombre</span></button><button data-theme="system" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="Système" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+</svg>
+<span>Système</span></button></div>
+</div>
+      </div>
+    </div>
+
+    
+    <div class="flex w-full items-center justify-between md:hidden">
+      
+      
+<div class="relative">
+  <button
+    id="mobile-menu-toggle"
+    class="dropdown-toggle border-border bg-background text-muted-foreground hover:bg-accent hover:text-foreground flex h-10 w-10 items-center justify-center rounded-lg border transition-colors duration-200"
+    data-dropdown-type="mobile-menu"
+    aria-label="Menu"
+    aria-expanded="false"
+    aria-haspopup="true">
+    <svg class="h-5 w-5" aria-label="Menu" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+</svg>
+
+  </button>
+
+  
+  <div
+    id="mobile-menu"
+    class="mobile-menu dropdown-menu border-border bg-popover/95 absolute top-12 left-0 z-[60] hidden w-80 max-w-[calc(100vw-2rem)] rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out md:hidden"
+    data-dropdown-type="mobile-menu"
+    role="menu"
+    aria-labelledby="mobile-menu-toggle">
+    <nav class="flex flex-col">
+      
+      
+    </nav>
+  </div>
+</div>
+
+
+      
+      <div class="flex items-center space-x-2">
+        
+        
+
+        
+        
+<div class="relative">
+  <button id="color-scheme-toggle"
+    class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
+    data-dropdown-type="color-scheme"
+    aria-label="Changer de thème"
+    aria-expanded="false"
+    aria-haspopup="true">
+      <svg class="h-5 w-5 relative z-10" aria-label="Changer de thème" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v6a2 2 0 002 2h4a2 2 0 002-2V5z" />
+</svg>
+</button>
+
+  
+  <div id="color-scheme-dropdown"
+    class="dropdown-menu border-border bg-popover/95 absolute top-12 right-0 z-[60] hidden w-44 rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
+    data-dropdown-type="color-scheme"></div>
+</div>
+
+        
+        
+<div class="relative">
+  <button id="theme-toggle"
+    class="dropdown-toggle border-border bg-background text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300 ease-out hover:scale-105 focus:ring-2 focus:outline-none active:scale-95"
+    data-dropdown-type="theme"
+    aria-label="Changer de thème"
+    aria-expanded="false"
+    aria-haspopup="true">
+      
+      <svg class="h-5 w-5 sun-icon hidden relative z-10" aria-label="Clair" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+</svg>
+
+      
+      <svg class="h-5 w-5 moon-icon hidden relative z-10" aria-label="Sombre" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+</svg>
+
+      
+      <svg class="h-5 w-5 system-icon hidden relative z-10" aria-label="Système" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+</svg>
+</button>
+
+  
+  <div id="theme-dropdown"
+    class="dropdown-menu border-border bg-popover/95 absolute top-12 right-0 z-[60] hidden w-40 rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
+    data-dropdown-type="theme"><button data-theme="light" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="Clair" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+</svg>
+<span>Clair</span></button><button data-theme="dark" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="Sombre" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+</svg>
+<span>Sombre</span></button><button data-theme="system" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none"><svg class="h-5 w-5 mr-3 h-4 w-4" aria-label="Système" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+</svg>
+<span>Système</span></button></div>
+</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <div class="px-4 py-6">
+      
+<nav
+  class="breadcrumb mb-4 md:mb-6 py-1"
+  aria-label="Fil d&#39;Ariane">
+  <ol class="text-muted-foreground flex items-center space-x-1 md:space-x-2 text-sm overflow-x-auto whitespace-nowrap scrollbar-hide py-1">
+    
+      
+        
+        <li class="shrink-0">
+          <a
+            href="/"
+            class="text-muted-foreground hover:text-primary hover:bg-primary/10 flex items-center gap-1 rounded-lg px-1 md:px-3 py-0.5 md:py-1.5 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-[1.02]">
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 12 2-2m0 0 7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+</svg>
+
+            <span class="max-w-16 md:max-w-none truncate">Home</span>
+          </a>
+        </li>
+      
+    
+      
+        
+        <li class="flex items-center gap-1 md:gap-2 min-w-0">
+          <span class="text-muted-foreground/50 shrink-0"
+            ><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+</svg>
+          </span>
+          <a
+            href="/posts/"
+            class="text-muted-foreground hover:text-primary hover:bg-primary/10 flex items-center gap-1 rounded-lg px-1 md:px-3 py-0.5 md:py-1.5 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-[1.02] shrink-0">
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+</svg>
+            <span class="max-w-16 md:max-w-none truncate">Posts</span>
+          </a>
+        </li>
+      
+    
+
+    
+    <li class="flex items-center gap-1 md:gap-2 min-w-0">
+      <span class="text-muted-foreground/50 shrink-0"
+        ><svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+</svg>
+      </span>
+      <span class="text-foreground font-medium flex items-center gap-1 min-w-0">
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+</svg>
+        <span class="max-w-32 md:max-w-[16rem] lg:max-w-none truncate">Markdown Syntax Guide</span>
+      </span>
+    </li>
+
+  </ol>
+</nav>
+
+
+      
+
+  
+
+
+  
+  <header class="mb-8">
+    
+
+
+
+
+<div class="post-meta mb-8">
+  
+  <h1 class="text-foreground mb-6 text-3xl leading-tight font-bold md:text-4xl">
+    Markdown Syntax Guide
+  </h1>
+
+  
+  
+  <div class="text-muted-foreground mb-6 text-lg leading-relaxed">
+    This is a post which includes all available Markdown syntax.
+  </div>
+  
+
+  
+  <div class="bg-card border-border rounded-xl border">
+
+    
+        
+        <div class="p-6">
+
+          
+          <div class="text-muted-foreground flex flex-wrap items-center gap-3 text-sm mb-4">
+            
+            <div class="flex items-center gap-2">
+              <svg class="h-4 w-4" aria-label="Publié le" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+</svg>
+
+              <time datetime="2024-01-15">
+                15 janvier 2024
+              </time>
+            </div>
+
+            
+            
+
+            
+            
+            <div class="flex items-center gap-2">
+              <svg class="h-4 w-4" aria-label="Temps de lecture" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+</svg>
+
+              <span>3 minute</span>
+            </div>
+            
+
+            
+            
+            <div class="flex items-center gap-2">
+              <svg class="h-4 w-4" aria-label="Nombre de mots" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+</svg>
+
+              <span>564 mots</span>
+            </div>
+            
+          </div>
+
+          
+          <div class="space-y-3 pt-4 border-t border-border">
+            <div class="flex items-center gap-2">
+              <div class="flex-shrink-0">
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+</svg>
+
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex flex-wrap items-center gap-1.5">
+                  <span class="text-muted-foreground text-sm font-medium">
+                    Categories:
+                  </span>
+                  <a href="/categories/markdown/"
+                    class="inline-flex items-center rounded-full px-2.5 py-1 text-sm font-medium transition-all duration-200 bg-muted/50 text-muted-foreground hover:bg-muted hover:text-foreground">
+                    Markdown
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="flex-shrink-0">
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+</svg>
+
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex flex-wrap items-center gap-1.5">
+                  <span class="text-muted-foreground text-sm font-medium">
+                    Tags:
+                  </span>
+                  <a href="/tags/markdown/"
+                    class="inline-flex items-center rounded-full px-2.5 py-1 text-sm font-medium transition-all duration-200 bg-muted/50 text-muted-foreground hover:bg-muted hover:text-foreground">
+                    Markdown
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          
+    </div>
+  </div>
+</div>
+
+  </header>
+
+  
+  <article class="prose prose-neutral dark:prose-invert mb-12 max-w-none">
+    <h1 id="heading-1">Heading 1</h1>
+<p>This is a paragraph under a level 1 heading.</p>
+<h2 id="heading-2">Heading 2</h2>
+<p>This is a paragraph under a level 2 heading.</p>
+<h3 id="heading-3">Heading 3</h3>
+<p>This is a paragraph under a level 3 heading.</p>
+<h4 id="heading-4">Heading 4</h4>
+<p>This is a paragraph under a level 4 heading.</p>
+<h5 id="heading-5">Heading 5</h5>
+<p>This is a paragraph under a level 5 heading.</p>
+<h6 id="heading-6">Heading 6</h6>
+<p>This is a paragraph under a level 6 heading.</p>
+<h2 id="paragraphs-and-text-formatting">Paragraphs and Text Formatting</h2>
+<p>This is a normal paragraph. It can contain <strong>bold text</strong>, <em>italic text</em>, <em><strong>bold italic text</strong></em>, <del>strikethrough</del>, <code>inline code</code>, and <a href="https://example.com"target="_blank"
+  class="inline-flex items-center gap-1"
+>link text<svg class="h-3 w-3 flex-shrink-0" id="external-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+</a>.</p>
+<p>This is another paragraph to test spacing between paragraphs.</p>
+<h2 id="blockquotes">Blockquotes</h2>
+
+  <blockquote
+    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
+    <div class="prose prose-sm max-w-none">
+      <p>This is a simple blockquote.</p>
+<p>Blockquotes can contain multiple paragraphs.</p>
+
+    </div>
+  </blockquote><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
+
+  <blockquote
+    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
+    <div class="prose prose-sm max-w-none">
+      <p>This is an example of a nested blockquote:</p>
+
+  <blockquote
+    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
+    <div class="prose prose-sm max-w-none">
+      <p>This is nested quote content.</p>
+<p>Multiple levels of nesting are possible.</p>
+
+    </div>
+  </blockquote><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
+
+    </div>
+  </blockquote><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
+<h2 id="lists">Lists</h2>
+<h3 id="unordered-list">Unordered List</h3>
+<ul>
+<li>First item</li>
+<li>Second item
+<ul>
+<li>Nested item 1</li>
+<li>Nested item 2
+<ul>
+<li>Even deeper nested item</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Third item</li>
+</ul>
+<h3 id="ordered-list">Ordered List</h3>
+<ol>
+<li>First item</li>
+<li>Second item
+<ol>
+<li>Nested ordered item 1</li>
+<li>Nested ordered item 2
+<ol>
+<li>Even deeper nested item</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Third item</li>
+</ol>
+<h3 id="task-list-checkbox">Task List (Checkbox)</h3>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Completed task</li>
+<li><input disabled="" type="checkbox"> Incomplete task</li>
+<li><input checked="" disabled="" type="checkbox"> Another completed task</li>
+<li><input disabled="" type="checkbox"> Nested task list
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Subtask 1 (done)</li>
+<li><input disabled="" type="checkbox"> Subtask 2 (not done)</li>
+<li><input checked="" disabled="" type="checkbox"> Subtask 3 (done)</li>
+</ul>
+</li>
+</ul>
+<h3 id="definition-list">Definition List</h3>
+<dl>
+<dt>Term 1</dt>
+<dd>This is the definition for term 1.</dd>
+<dt>Term 2</dt>
+<dd>This is the definition for term 2.</dd>
+<dd>Terms can have multiple definitions.</dd>
+</dl>
+<h2 id="code">Code</h2>
+<h3 id="inline-code">Inline Code</h3>
+<p>This is a paragraph with <code>console.log('Hello World')</code> inside.</p>
+<h3 id="code-blocks">Code Blocks</h3>
+<div
+  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
+  
+  <div
+    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
+    
+    <div class="flex items-center gap-2">
+      <div class="text-muted-foreground flex-shrink-0">
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+</svg>
+      </div>
+      <span class="text-muted-foreground text-sm font-medium">
+        main.js
+      </span>
+    </div>
+
+    
+    <div class="flex items-center gap-2">
+      <button
+          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+          data-code-id="code-0"
+          data-default-state="expanded"
+          data-collapsed="false"
+          data-auto-collapse-lines="30"
+          data-auto-collapse-height="400"
+          data-collapsed-height="120"
+          title="Réduire"
+          aria-label="Réduire">
+          <span class="collapse-icon">
+            <svg class="h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
+          </span>
+          <span class="collapse-text hidden sm:inline"
+            >Réduire</span
+          >
+        </button>
+      <button
+        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
+        data-code-id="code-0"
+        title="复制代码"
+        aria-label="复制代码">
+        <span class="copy-icon">
+          <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+</svg>
+        </span>
+        <span class="copy-text hidden sm:inline"
+          >复制</span
+        >
+      </button>
+    </div>
+  </div>
+
+  
+  <div class="code-block-content relative" id="code-0">
+    <div class="highlight" filename="main.js"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="kd">function</span> <span class="nx">fibonacci</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="nx">n</span><span class="p">;</span>
+</span></span><span class="line hl"><span class="ln"> 3</span><span class="cl">  <span class="k">return</span> <span class="nx">fibonacci</span><span class="p">(</span><span class="nx">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="nx">fibonacci</span><span class="p">(</span><span class="nx">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">
+</span></span><span class="line hl"><span class="ln"> 6</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">fibonacci</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+</span></span><span class="line hl"><span class="ln"> 8</span><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`The 10th Fibonacci number is: </span><span class="si">${</span><span class="nx">result</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">
+</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="c1">// Async/Await
+</span></span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="kr">const</span> <span class="nx">asyncFunction</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">  <span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">    <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;/api/data&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl">    <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl">    <span class="k">return</span> <span class="nx">data</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl">  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln">17</span><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error fetching data:&#39;</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">18</span><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="ln">19</span><span class="cl"><span class="p">};</span></span></span></code></pre></div>
+    
+    <div
+      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
+      <div
+        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
+        Cliquez pour développer et voir plus
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+(function() {
+  const codeId = 'code-0';
+  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
+  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
+  const codeContainer = document.getElementById(codeId);
+
+  if (!codeContainer) return;
+
+  
+  if (copyBtn) {
+    const copyIcon = copyBtn.querySelector('.copy-icon');
+    const copyText = copyBtn.querySelector('.copy-text');
+
+    copyBtn.addEventListener('click', async function() {
+      try {
+        
+        let codeText = '';
+
+        
+        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
+        if (codeTableCell) {
+          codeText = codeTableCell.textContent || codeTableCell.innerText;
+        } else {
+          
+          const codeElement = codeContainer.querySelector('code');
+          if (codeElement) {
+            
+            const hasInlineLineNumbers = codeElement.querySelector('.ln');
+            if (hasInlineLineNumbers) {
+              
+              const codeLines = codeElement.querySelectorAll('.cl');
+              if (codeLines.length > 0) {
+                codeText = Array.from(codeLines)
+                  .map(line => {
+                    const text = line.textContent || line.innerText;
+                    
+                    return text.replace(/\n+$/, '');
+                  })
+                  .join('\n')
+                  .replace(/\n+$/, ''); 
+              } else {
+                
+                const allText = codeElement.textContent || codeElement.innerText;
+                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
+              }
+            } else {
+              
+              codeText = codeElement.textContent || codeElement.innerText;
+            }
+          } else {
+            
+            codeText = codeContainer.textContent || codeContainer.innerText;
+          }
+        }
+
+        
+        codeText = codeText.trim();
+
+        
+        await navigator.clipboard.writeText(codeText);
+
+        
+        copyIcon.innerHTML = `\u003csvg class=\u0022h-3 w-3\u0022 fill=\u0022none\u0022 stroke=\u0022currentColor\u0022 viewBox=\u00220 0 24 24\u0022 xmlns=\u0022http:\/\/www.w3.org\/2000\/svg\u0022\u003e\n  \u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
+        if (copyText) {
+          copyText.textContent = 'Copié';
+        }
+        copyBtn.classList.add('text-green-600');
+
+        
+        setTimeout(() => {
+          copyIcon.innerHTML = `\u003csvg class=\u0022h-3 w-3\u0022 fill=\u0022none\u0022 stroke=\u0022currentColor\u0022 viewBox=\u00220 0 24 24\u0022 xmlns=\u0022http:\/\/www.w3.org\/2000\/svg\u0022\u003e\n  \u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
+          if (copyText) {
+            copyText.textContent = '复制';
+          }
+          copyBtn.classList.remove('text-green-600');
+        }, 2000);
+
+      } catch (err) {
+        console.error('复制失败:', err);
+
+        
+        const range = document.createRange();
+        const codeElement = codeContainer.querySelector('code') || codeContainer;
+        range.selectNodeContents(codeElement);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+
+        
+        if (copyText) {
+          copyText.textContent = 'Sélectionné';
+        }
+
+        setTimeout(() => {
+          if (copyText) {
+            copyText.textContent = '复制';
+          }
+          selection.removeAllRanges();
+        }, 2000);
+      }
+    });
+  }
+
+  
+  if (collapseBtn) {
+    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
+    const collapseText = collapseBtn.querySelector('.collapse-text');
+    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
+
+    
+    let codeElement = codeContainer.querySelector('pre.chroma');
+    if (!codeElement) {
+      codeElement = codeContainer.querySelector('pre');
+    }
+
+    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
+    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
+    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
+    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
+    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
+
+    let isCollapsed = false;
+
+    
+    function initCollapse() {
+      
+      const shouldCollapse = isCollapsedAttr ||
+                           defaultState === 'collapsed' ||
+                           shouldAutoCollapse();
+
+      if (shouldCollapse) {
+        setCollapsed(true, false); 
+      }
+    }
+
+    function shouldAutoCollapse() {
+      
+      if (codeElement) {
+        const lines = codeElement.querySelectorAll('.line, .cl');
+        const height = codeElement.offsetHeight;
+        return lines.length > autoCollapseLines || height > autoCollapseHeight;
+      }
+
+      
+      const containerHeight = codeContainer.offsetHeight;
+      if (containerHeight > autoCollapseHeight) {
+        return true;
+      }
+
+      
+      const textContent = codeContainer.textContent || codeContainer.innerText || '';
+      const estimatedLines = textContent.split('\n').length;
+      return estimatedLines > autoCollapseLines;
+    }
+
+    function setCollapsed(collapsed, animate = true) {
+      if (!collapseOverlay) return;
+
+      isCollapsed = collapsed;
+
+      if (collapsed) {
+        
+        codeContainer.style.maxHeight = collapsedHeight + 'px';
+        codeContainer.style.overflow = 'hidden';
+        collapseOverlay.style.opacity = '1';
+        collapseOverlay.style.pointerEvents = 'auto';
+
+        
+        collapseIcon.innerHTML = `\u003csvg class=\u0022h-3 w-3\u0022 fill=\u0022none\u0022 stroke=\u0022currentColor\u0022 viewBox=\u00220 0 24 24\u0022 xmlns=\u0022http:\/\/www.w3.org\/2000\/svg\u0022\u003e\n  \u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = 'Développer';
+        }
+        collapseBtn.title = 'Développer';
+
+      } else {
+        
+        codeContainer.style.maxHeight = '';
+        codeContainer.style.overflow = '';
+        collapseOverlay.style.opacity = '0';
+        collapseOverlay.style.pointerEvents = 'none';
+
+        
+        collapseIcon.innerHTML = `\u003csvg class=\u0022h-3 w-3\u0022 xmlns=\u0022http:\/\/www.w3.org\/2000\/svg\u0022 viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
+        if (collapseText) {
+          collapseText.textContent = 'Réduire';
+        }
+        collapseBtn.title = 'Réduire';
+      }
+
+      
+      if (animate) {
+        codeContainer.style.transition = 'max-height 0.3s ease-out';
+        setTimeout(() => {
+          codeContainer.style.transition = '';
+        }, 300);
+      }
+    }
+
+    function toggleCollapse() {
+      setCollapsed(!isCollapsed, true);
+    }
+
+    
+    collapseBtn.addEventListener('click', toggleCollapse);
+
+    
+    if (collapseOverlay) {
+      collapseOverlay.addEventListener('click', () => {
+        if (isCollapsed) {
+          setCollapsed(false, true);
+        }
+      });
+    }
+
+    
+    initCollapse();
+  }
+})();
+</script>
+<h2 id="tables">Tables</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Left Align</th>
+          <th style="text-align: center">Center Align</th>
+          <th style="text-align: right">Right Align</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Content 1</td>
+          <td style="text-align: center">Content 2</td>
+          <td style="text-align: right">Content 3</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Longer content</td>
+          <td style="text-align: center">Medium</td>
+          <td style="text-align: right">Short</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Data A</td>
+          <td style="text-align: center">Data B</td>
+          <td style="text-align: right">Data C</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="images">Images</h2>
+<p>
+<figure class="image-figure not-prose my-8"
+        data-lightbox-enabled="false"
+        data-gallery-type="auto"
+        data-image-width="0"
+        data-image-height="0"
+        data-image-src="/images/01.avif">
+  <div class="image-container">
+    <img
+    src="/images/01.avif"
+    alt="Sample Image"
+    title="Sample Image"
+    
+      
+      
+    
+    loading="lazy"
+    decoding="async"
+    data-gallery-src="/images/01.avif"
+    data-gallery-alt="Sample Image"
+    data-gallery-title="Sample Image" /></div>
+
+  <figcaption class="image-caption">
+      Sample Image
+    </figcaption></figure></p>
+<h2 id="links">Links</h2>
+<p>This is a <a href="https://example.com"target="_blank"
+  class="inline-flex items-center gap-1"
+>regular link<svg class="h-3 w-3 flex-shrink-0" id="external-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+</a>.</p>
+<p>This is a <a href="https://example.com" title="Link Title"target="_blank"
+  class="inline-flex items-center gap-1"
+>link with title<svg class="h-3 w-3 flex-shrink-0" id="external-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+</a>.</p>
+<p>This is a reference-style link: <a href="https://example.com" title="Reference Link Title"target="_blank"
+  class="inline-flex items-center gap-1"
+>Reference Link<svg class="h-3 w-3 flex-shrink-0" id="external-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+</a></p>
+<h2 id="footnotes">Footnotes</h2>
+<p>This is a paragraph with a footnote<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
+<p>Here is another footnote<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
+<h2 id="highlighted-text">Highlighted Text</h2>
+<p>This is a paragraph with <mark>highlighted text</mark>.</p>
+<h2 id="superscript-and-subscript">Superscript and Subscript</h2>
+<p>H<del>2</del>O is the chemical formula for water.</p>
+<p>E = mc<sup>2</sup> is Einstein&rsquo;s mass-energy equation.</p>
+<h2 id="keyboard-keys">Keyboard Keys</h2>
+<p>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy text.</p>
+<h2 id="math">Math</h2>
+<p>Inline formula: $E = mc^2$</p>
+<h3 id="block-formula">Block Formula</h3>
+<p>$$x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}$$</p>
+<p>$$e^{i\pi} + 1 = 0$$</p>
+<p>$$\begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} ax + by \\ cx + dy \end{pmatrix}$$</p>
+<h2 id="mermaid">Mermaid</h2>
+
+
+
+<pre class="mermaid">
+  sequenceDiagram
+    participant User
+    participant Browser
+    participant Server
+    participant Database
+
+    User-&gt;&gt;Browser: Enter URL
+    Browser-&gt;&gt;Server: Send HTTP Request
+    Server-&gt;&gt;Database: Query Data
+    Database--&gt;&gt;Server: Return Data
+    Server--&gt;&gt;Browser: Return HTML
+    Browser--&gt;&gt;User: Display Page
+</pre>
+
+<h2 id="alert">Alert</h2>
+<div
+    class="alert alert-note my-6 overflow-hidden rounded-lg transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md"
+    style="background-color: color-mix(in srgb, var(--color-note) 10%, transparent);
+              border-left-color: var(--color-note);
+              --hover-bg: color-mix(in srgb, var(--color-note) 15%, transparent);"
+    onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
+    onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-note) 10%, transparent)'"
+    role="alert"
+    aria-labelledby="alert-3-title">
+    
+    <div
+      class=" flex items-center justify-between px-6 py-6"
+      >
+      <div class="flex items-center gap-3">
+        
+        <h4
+          id="alert-3-title"
+          class="m-0 font-semibold text-foreground/90">
+          Note
+        </h4>
+      </div>
+
+      
+      
+    </div>
+
+    
+    <div
+      id="alert-3-content"
+      class="alert-content  px-6 pb-6">
+      <div class="prose prose-sm text-foreground/90 max-w-none">
+        <p>This is a note.</p>
+      </div>
+    </div>
+  </div><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
+<div
+    class="alert alert-tip my-6 overflow-hidden rounded-lg transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md"
+    style="background-color: color-mix(in srgb, var(--color-tip) 10%, transparent);
+              border-left-color: var(--color-tip);
+              --hover-bg: color-mix(in srgb, var(--color-tip) 15%, transparent);"
+    onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
+    onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-tip) 10%, transparent)'"
+    role="alert"
+    aria-labelledby="alert-4-title">
+    
+    <div
+      class=" flex items-center justify-between px-6 py-6"
+      >
+      <div class="flex items-center gap-3">
+        
+        <h4
+          id="alert-4-title"
+          class="m-0 font-semibold text-foreground/90">
+          Astuce
+        </h4>
+      </div>
+
+      
+      
+    </div>
+
+    
+    <div
+      id="alert-4-content"
+      class="alert-content  px-6 pb-6">
+      <div class="prose prose-sm text-foreground/90 max-w-none">
+        <p>This is a tip.</p>
+      </div>
+    </div>
+  </div><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
+<div
+    class="alert alert-important my-6 overflow-hidden rounded-lg transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md"
+    style="background-color: color-mix(in srgb, var(--color-important) 10%, transparent);
+              border-left-color: var(--color-important);
+              --hover-bg: color-mix(in srgb, var(--color-important) 15%, transparent);"
+    onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
+    onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-important) 10%, transparent)'"
+    role="alert"
+    aria-labelledby="alert-5-title">
+    
+    <div
+      class=" flex items-center justify-between px-6 py-6"
+      >
+      <div class="flex items-center gap-3">
+        
+        <h4
+          id="alert-5-title"
+          class="m-0 font-semibold text-foreground/90">
+          Important
+        </h4>
+      </div>
+
+      
+      
+    </div>
+
+    
+    <div
+      id="alert-5-content"
+      class="alert-content  px-6 pb-6">
+      <div class="prose prose-sm text-foreground/90 max-w-none">
+        <p>This is important information.</p>
+      </div>
+    </div>
+  </div><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
+<div
+    class="alert alert-warning my-6 overflow-hidden rounded-lg transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md"
+    style="background-color: color-mix(in srgb, var(--color-warning) 10%, transparent);
+              border-left-color: var(--color-warning);
+              --hover-bg: color-mix(in srgb, var(--color-warning) 15%, transparent);"
+    onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
+    onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-warning) 10%, transparent)'"
+    role="alert"
+    aria-labelledby="alert-6-title">
+    
+    <div
+      class=" flex items-center justify-between px-6 py-6"
+      >
+      <div class="flex items-center gap-3">
+        
+        <h4
+          id="alert-6-title"
+          class="m-0 font-semibold text-foreground/90">
+          Avertissement
+        </h4>
+      </div>
+
+      
+      
+    </div>
+
+    
+    <div
+      id="alert-6-content"
+      class="alert-content  px-6 pb-6">
+      <div class="prose prose-sm text-foreground/90 max-w-none">
+        <p>This is a warning.</p>
+      </div>
+    </div>
+  </div><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
+<div
+    class="alert alert-caution my-6 overflow-hidden rounded-lg transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md"
+    style="background-color: color-mix(in srgb, var(--color-caution) 10%, transparent);
+              border-left-color: var(--color-caution);
+              --hover-bg: color-mix(in srgb, var(--color-caution) 15%, transparent);"
+    onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
+    onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-caution) 10%, transparent)'"
+    role="alert"
+    aria-labelledby="alert-7-title">
+    
+    <div
+      class=" flex items-center justify-between px-6 py-6"
+      >
+      <div class="flex items-center gap-3">
+        
+        <h4
+          id="alert-7-title"
+          class="m-0 font-semibold text-foreground/90">
+          Prudence
+        </h4>
+      </div>
+
+      
+      
+    </div>
+
+    
+    <div
+      id="alert-7-content"
+      class="alert-content  px-6 pb-6">
+      <div class="prose prose-sm text-foreground/90 max-w-none">
+        <p>This is a caution.</p>
+      </div>
+    </div>
+  </div><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
+<div
+    class="alert alert-note my-6 overflow-hidden rounded-lg transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md"
+    style="background-color: color-mix(in srgb, var(--color-note) 10%, transparent);
+              border-left-color: var(--color-note);
+              --hover-bg: color-mix(in srgb, var(--color-note) 15%, transparent);"
+    onmouseover="this.style.backgroundColor = this.style.getPropertyValue('--hover-bg')"
+    onmouseout="this.style.backgroundColor = 'color-mix(in srgb, var(--color-note) 10%, transparent)'"
+    role="alert"
+    aria-labelledby="alert-8-title">
+    
+    <div
+      class="
+        cursor-pointer
+       flex items-center justify-between px-6 py-6"
+      
+        onclick="toggleAlert('alert-8')" role="button" tabindex="0"
+        aria-expanded="true" aria-controls="alert-8-content"
+        onkeydown="if(event.key==='Enter'||event.key===' '){toggleAlert('alert-8');event.preventDefault();}"
+      >
+      <div class="flex items-center gap-3">
+        
+        <h4
+          id="alert-8-title"
+          class="m-0 font-semibold text-foreground/90">
+          Custom Title (Click to Collapse)
+        </h4>
+      </div>
+
+      
+      
+        <div
+          class="flex-shrink-0 transition-transform duration-200"
+          id="alert-8-chevron">
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+</svg>
+        </div>
+      
+    </div>
+
+    
+    <div
+      id="alert-8-content"
+      class="alert-content  px-6 pb-6">
+      <div class="prose prose-sm text-foreground/90 max-w-none">
+        <p>This is an expanded foldable alert box by default. Click the title to collapse the content.</p>
+      </div>
+    </div>
+  </div><script>
+function toggleAlert(alertId) {
+  const content = document.getElementById(alertId + '-content');
+  const chevron = document.getElementById(alertId + '-chevron');
+  const header = content.previousElementSibling;
+  
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    chevron.style.transform = 'rotate(0deg)';
+    header.setAttribute('aria-expanded', 'true');
+  } else {
+    content.classList.add('hidden');
+    chevron.style.transform = 'rotate(-90deg)';
+    header.setAttribute('aria-expanded', 'false');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
+  collapsedAlerts.forEach(function(content) {
+    const alertId = content.id.replace('-content', '');
+    const chevron = document.getElementById(alertId + '-chevron');
+    if (chevron) {
+      chevron.style.transform = 'rotate(-90deg)';
+    }
+  });
+});
+</script>
+
+<h2 id="details">Details</h2>
+<details>
+<summary>Click to expand details</summary>
+<p>This is the collapsed detailed content.</p>
+<p>You can include any Markdown syntax here:</p>
+<ul>
+<li>List item</li>
+<li><strong>Bold text</strong></li>
+<li><code>Code</code></li>
+</ul>
+</details>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>This is the content of the first footnote.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>This is the content of a named footnote.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+  </article>
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="post-license bg-muted/30 border-border mb-8 rounded-xl border p-6">
+    <div class="flex items-start gap-4">
+      
+      <div
+        class="bg-primary/10 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg">
+        <svg class="h-6 w-6" aria-label="许可证" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+</svg>
+      </div>
+
+      
+      <div class="flex-1 min-w-0">
+        <h3 class="text-foreground mb-2 text-lg font-semibold">
+          版权声明
+        </h3>
+
+        <div class="text-muted-foreground space-y-2 text-sm">
+          
+          
+
+          
+          <p>
+            <strong>Lien:</strong>
+            <a
+              href="http://localhost:1313/posts/markdown-syntax-guide/"
+              class="text-primary hover:text-primary/80 transition-colors break-all hyphens-auto duration-200">
+              http://localhost:1313/posts/markdown-syntax-guide/
+            </a>
+          </p>
+
+          
+          <p>
+            <strong>Licence:</strong>
+            
+              <a
+                href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-primary hover:text-primary/80 transition-colors duration-200">
+                知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议
+              </a>
+            
+          </p>
+
+          
+          
+          <p class="text-xs">
+            本作品采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议进行许可。
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  
+  
+
+
+
+
+
+  <nav
+    class="post-navigation mb-12"
+    aria-label="Navigation des articles">
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+      
+      <div class="nav-item">
+        
+          <a
+            href="/posts/markdown-%E8%AF%AD%E6%B3%95%E6%8C%87%E5%8D%97/"
+            class="group bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex min-h-[140px] flex-col justify-between rounded-xl border p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none">
+            <div>
+              <div class="mb-3 flex items-center gap-3">
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+</svg>
+                <span class="text-muted-foreground text-sm font-medium">
+                  Précédent
+                </span>
+              </div>
+
+              <h3
+                class="text-foreground group-hover:text-primary mb-3 line-clamp-2 text-lg leading-tight font-semibold transition-colors duration-200">
+                Markdown 语法指南
+              </h3>
+            </div>
+
+            <div
+              class="text-muted-foreground mt-auto flex items-center gap-2 text-xs">
+              <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+</svg>
+
+              <time datetime="2024-01-15">
+                15 janv.
+              </time>
+            </div>
+          </a>
+        
+      </div>
+
+      
+      <div class="nav-item">
+        
+          <a
+            href="/posts/image-gallery/"
+            class="group bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex min-h-[140px] flex-col justify-between rounded-xl border p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none">
+            <div>
+              <div class="mb-3 flex items-center justify-end gap-3">
+                <span class="text-muted-foreground text-sm font-medium">
+                  Suivant
+                </span>
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+</svg>
+              </div>
+
+              <h3
+                class="text-foreground group-hover:text-primary mb-3 line-clamp-2 text-right text-lg leading-tight font-semibold transition-colors duration-200">
+                Image Gallery
+              </h3>
+            </div>
+
+            <div
+              class="text-muted-foreground mt-auto flex items-center justify-end gap-2 text-xs">
+              <time datetime="2024-01-16">
+                16 janv.
+              </time>
+              <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+</svg>
+
+            </div>
+          </a>
+        
+      </div>
+    </div>
+  </nav>
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  <section class="related-posts mb-12">
+    
+    <div class="mb-6 flex items-center gap-3">
+      <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+</svg>
+      <h2 class="text-foreground text-2xl font-bold">
+        Articles connexes
+      </h2>
+    </div>
+
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
+      
+        <article class="group">
+          <a href="/posts/markdown-%E8%AF%AD%E6%B3%95%E6%8C%87%E5%8D%97/" class="block">
+            <div class="bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex items-center rounded-xl border p-5 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none min-h-[120px]">
+              <h3 class="text-foreground group-hover:text-primary text-lg font-semibold leading-snug line-clamp-3 w-full">
+                Markdown 语法指南
+              </h3>
+            </div>
+          </a>
+        </article>
+      
+    </div>
+  </section>
+
+
+
+
+  
+  
+
+
+    </div>
+
+    <footer class="px-4 py-6">
+
+  
+  
+
+
+  
+  
+
+
+  
+  <div class="flex flex-col items-center justify-between gap-4 md:flex-row">
+    
+    <div class="text-muted-foreground text-sm text-center md:text-left">
+      <p class="mb-2">
+        &copy; 2026 XP.
+        Tous droits réservés.
+      </p>
+      <p class="flex flex-wrap items-center justify-center gap-1 md:justify-start">
+        <span>Powered by</span>
+        <a 
+          href="https://gohugo.io/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="text-primary hover:text-primary/80 font-medium transition-colors duration-200 hover:underline"
+        >
+          Hugo
+        </a>
+        <span>&</span>
+        <a 
+          href="https://github.com/tom2almighty/hugo-narrow" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="text-primary hover:text-primary/80 font-medium transition-colors duration-200 hover:underline"
+        >
+          Narrow
+        </a>
+      </p>
+    </div>
+
+    
+    
+
+  </div>
+
+</footer>
+    
+
+
+
+
+<div
+  id="dock"
+  class="pointer-events-none fixed bottom-4 left-1/2 z-9999 w-fit -translate-x-1/2 translate-y-24 opacity-0 transition-all duration-300 ease-out sm:right-0 sm:left-0 sm:mx-auto sm:translate-x-0"
+  data-dock-mode="scroll"
+  role="toolbar"
+  aria-label="快捷操作工具栏">
+  <nav
+    class="border-border bg-card/80 scrollbar-hide xs:px-3 xs:py-2 mx-auto flex max-w-[calc(100vw-2rem)] min-w-fit items-center justify-center overflow-x-auto rounded-2xl border px-4 py-3 shadow-lg backdrop-blur-sm sm:px-4 sm:py-3">
+    
+    
+      <button
+        id="dock-back"
+        class="text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 xs:px-2 xs:py-1.5 flex shrink-0 items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none sm:px-3 sm:py-2"
+        title="Retour"
+        aria-label="Retour">
+        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="m12 19-7-7 7-7"/>
+  <path d="M19 12H5"/>
+</svg>
+
+        <span class="hidden sm:inline"
+          >Retour</span
+        >
+      </button>
+
+      
+      <div class="bg-border xs:mx-1 mx-2 h-6 w-px sm:mx-2"></div>
+    
+
+
+
+
+
+      <button
+      id="dock-search"
+      class="text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 xs:px-3 xs:py-1.5 flex shrink-0 items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none sm:px-4 sm:py-2"
+      title="Rechercher"
+      aria-label="Rechercher">
+      <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+</svg>
+
+      <span class="hidden md:inline"
+        >Rechercher</span
+      >
+    </button>
+
+    
+    <div class="bg-border xs:mx-1 mx-2 h-6 w-px sm:mx-2"></div>
+
+    
+    
+    
+
+    
+    <button
+      id="dock-top"
+      class="text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 xs:px-2 xs:py-1.5 flex shrink-0 items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none sm:px-3 sm:py-2"
+      title="Retour en haut"
+      aria-label="Retour en haut">
+      <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="m18 15-6-6-6 6"/>
+</svg>
+
+      <span class="hidden sm:inline"
+        >Haut</span
+      >
+    </button>
+  </nav>
+</div>
+
+
+
+
+
+    <aside id="toc-container" class="toc-center" data-position="center">
+      <div id="toc-center" class="pointer-events-none fixed left-0 right-0 top-28 z-40 mx-auto w-full max-w-4xl px-4 transition-all duration-300">
+        <div class="pointer-events-auto relative mx-auto w-fit">
+          <button id="toc-center-toggle" class="bg-card/80 border-border text-muted-foreground hover:text-primary hover:bg-primary/10 flex items-center gap-2 rounded-full border px-4 py-1.5 text-sm backdrop-blur-sm transition-colors cursor-pointer shadow-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="8" x2="21" y1="6" y2="6"/>
+  <line x1="8" x2="21" y1="12" y2="12"/>
+  <line x1="8" x2="21" y1="18" y2="18"/>
+  <line x1="3" x2="3.01" y1="6" y2="6"/>
+  <line x1="3" x2="3.01" y1="12" y2="12"/>
+  <line x1="3" x2="3.01" y1="18" y2="18"/>
+</svg>
+
+            <span id="toc-center-title" class="truncate max-w-[200px]">Table des matières</span>
+            <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+</svg>
+          </button>
+          
+          
+          <div id="toc-center-dropdown" class="bg-card border-border absolute left-1/2 top-full mt-2 hidden max-h-[60vh] w-[280px] -translate-x-1/2 overflow-y-auto rounded-xl border p-4 shadow-lg transition-all opacity-0 origin-top scale-95 scrollbar-hide">
+            <div id="toc-center-content" class="text-sm [&_nav>ul]:pl-0 [&_ul]:list-none [&_ul]:pl-4 [&_li]:my-1.5 [&_a]:block [&_a]:rounded-md [&_a]:px-2 [&_a]:py-1 [&_a]:text-muted-foreground [&_a]:transition-colors [&_a:hover]:bg-primary/10 [&_a:hover]:text-primary [&_a.active]:bg-primary/10 [&_a.active]:text-primary [&_a.active]:font-medium [&_a]:truncate">
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="#heading-2">Heading 2</a>
+      <ul>
+        <li><a href="#heading-3">Heading 3</a>
+          <ul>
+            <li><a href="#heading-4">Heading 4</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#paragraphs-and-text-formatting">Paragraphs and Text Formatting</a></li>
+    <li><a href="#blockquotes">Blockquotes</a></li>
+    <li><a href="#lists">Lists</a>
+      <ul>
+        <li><a href="#unordered-list">Unordered List</a></li>
+        <li><a href="#ordered-list">Ordered List</a></li>
+        <li><a href="#task-list-checkbox">Task List (Checkbox)</a></li>
+        <li><a href="#definition-list">Definition List</a></li>
+      </ul>
+    </li>
+    <li><a href="#code">Code</a>
+      <ul>
+        <li><a href="#inline-code">Inline Code</a></li>
+        <li><a href="#code-blocks">Code Blocks</a></li>
+      </ul>
+    </li>
+    <li><a href="#tables">Tables</a></li>
+    <li><a href="#images">Images</a></li>
+    <li><a href="#links">Links</a></li>
+    <li><a href="#footnotes">Footnotes</a></li>
+    <li><a href="#highlighted-text">Highlighted Text</a></li>
+    <li><a href="#superscript-and-subscript">Superscript and Subscript</a></li>
+    <li><a href="#keyboard-keys">Keyboard Keys</a></li>
+    <li><a href="#math">Math</a>
+      <ul>
+        <li><a href="#block-formula">Block Formula</a></li>
+      </ul>
+    </li>
+    <li><a href="#mermaid">Mermaid</a></li>
+    <li><a href="#alert">Alert</a></li>
+    <li><a href="#details">Details</a></li>
+  </ul>
+</nav>
+            </div>
+          </div>
+        </div>
+      </div></aside>
+    
+<div
+  id="search-overlay"
+  class="pointer-events-none fixed inset-0 z-40 bg-black/50 opacity-0 transition-opacity duration-300"></div>
+
+
+<div
+  id="search-modal"
+  class="bg-card border-border pointer-events-none fixed top-1/2 left-1/2 z-50 max-h-[80vh] w-full max-w-2xl -translate-x-1/2 -translate-y-1/2 scale-95 transform overflow-hidden rounded-xl border opacity-0 shadow-xl transition-all duration-300">
+  
+  <div class="border-border flex items-center gap-3 border-b p-4">
+    
+    <div class="text-muted-foreground h-5 w-5 flex-shrink-0">
+      <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+</svg>
+
+    </div>
+
+    
+    <div class="relative flex-1">
+      
+      <button
+        id="search-clear"
+        class="text-muted-foreground hover:text-foreground hover:bg-muted/50 pointer-events-none absolute top-1/2 left-0 z-10 h-5 w-5 -translate-y-1/2 rounded opacity-0 transition-all duration-200"
+        title="Effacer"
+        aria-label="Effacer">
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+</svg>
+
+      </button>
+
+      
+      <input
+        id="search-input"
+        type="text"
+        placeholder="Rechercher des articles..."
+        class="text-foreground placeholder:text-muted-foreground w-full border-none bg-transparent pl-8 text-lg outline-none"
+        autocomplete="off"
+        spellcheck="false" />
+    </div>
+
+    
+    <button
+      id="search-close"
+      class="text-muted-foreground hover:text-foreground hover:bg-muted/50 flex h-6 w-6 items-center justify-center rounded-md p-0.5 transition-all duration-200"
+      title="Fermer"
+      aria-label="Fermer">
+      <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+</svg>
+
+    </button>
+  </div>
+
+  
+  <div id="search-results" class="max-h-96 overflow-y-auto">
+    
+    <div
+      id="search-empty"
+      class="flex flex-col items-center justify-center py-12 text-center">
+      <div
+        class="bg-muted/50 mb-4 flex h-16 w-16 items-center justify-center rounded-full">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+</svg>
+
+      </div>
+      <h3 class="text-foreground mb-2 text-lg font-semibold">
+        Commencer la recherche
+      </h3>
+      <p class="text-muted-foreground text-sm">
+        Saisissez des mots-clés pour rechercher des articles
+      </p>
+    </div>
+
+    
+    <div
+      id="search-loading"
+      class="flex hidden items-center justify-center py-8">
+      <div
+        class="mr-3 h-6 w-6 animate-spin rounded-full border-2 border-current border-t-transparent"></div>
+      <span class="text-muted-foreground"
+        >Recherche en cours...</span
+      >
+    </div>
+
+    
+    <div
+      id="search-no-results"
+      class="flex hidden flex-col items-center justify-center py-12 text-center">
+      <div
+        class="bg-muted/50 mb-4 flex h-16 w-16 items-center justify-center rounded-full">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+</svg>
+
+      </div>
+      <h3 class="text-foreground mb-2 text-lg font-semibold">
+        Aucun résultat trouvé
+      </h3>
+      <p class="text-muted-foreground text-sm">
+        Essayez avec des mots-clés différents
+      </p>
+    </div>
+
+    
+    <div id="search-results-list" class="hidden">
+      
+      <div
+        id="search-stats"
+        class="text-muted-foreground border-border border-b px-4 py-3 text-sm"
+        data-template="%d résultats trouvés">
+      </div>
+
+      
+      <div id="search-items" class="divide-border divide-y">
+        
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="border-border bg-muted/20 border-t px-4 py-3">
+    <div
+      class="text-muted-foreground flex items-center justify-between text-xs">
+      <div class="flex items-center gap-2 md:gap-4">
+        <div class="flex items-center gap-1">
+          <kbd
+            class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs"
+            >↑↓</kbd
+          >
+          <span class="hidden sm:inline"
+            >Naviguer</span
+          >
+        </div>
+        <div class="flex items-center gap-1">
+          <kbd
+            class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs"
+            >↵</kbd
+          >
+          <span class="hidden sm:inline"
+            >Sélectionner</span
+          >
+        </div>
+        <div class="flex items-center gap-1">
+          <kbd
+            class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs"
+            >ESC</kbd
+          >
+          <span class="hidden sm:inline"
+            >Fermer</span
+          >
+        </div>
+      </div>
+      <div class="search-hint-desktop flex items-center gap-1">
+        <kbd class="bg-muted border-border rounded border px-1.5 py-0.5 text-xs"
+          >⌘K</kbd
+        >
+        <span>Raccourci</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+
+    
+
+
+  </main>
+
+</body>
+
+</html>

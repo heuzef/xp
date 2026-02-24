@@ -1,0 +1,18 @@
+{
+  "background_color": "#ffffff",
+  "categories": [
+    "blog",
+    "technology",
+    "education"
+  ],
+  "description": "",
+  "dir": "ltr",
+  "display": "standalone",
+  "lang": "fr-fr",
+  "name": "XP",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "short_name": "XP",
+  "start_url": "/",
+  "theme_color": "#09090b"
+}
