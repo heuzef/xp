@@ -51,19 +51,13 @@ social:
     weight: 10
     params:
       icon: github
-  - name: Twitter
-    url: https://twitter.com/username
-    weight: 20
-    params:
-      icon: twitter
   - name: LinkedIn
-    url: https://linkedin.com/in/username
-    weight: 30
+    url: https://linkedin.com/in/heuzef
+    weight: 20
     params:
       icon: linkedin
   - name: Email
-    url: mailto:your.email@example.com
-    weight: 40
+    url: mailto:contact@heuzef.com
+    weight: 30
     params:
       icon: email
-
