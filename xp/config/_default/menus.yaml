@@ -5,25 +5,30 @@ main:
     weight: 10
     params:
       icon: posts
-
-  - identifier: nav.categories
-    name: Categories
-    pageRef: /categories
-    weight: 20
-    params:
-      icon: categories
+  # - identifier: nav.categories
+  #   name: Categories
+  #   pageRef: /categories
+  #   weight: 20
+  #   params:
+  #     icon: categories
   - identifier: nav.tags
     name: Tags
     pageRef: /tags
     weight: 30
     params:
       icon: tags
-  - identifier: nav.archives
-    name: Archives
-    pageRef: /archives
-    weight: 40
+  # - identifier: nav.archives
+  #   name: Archives
+  #   pageRef: /archives
+  #   weight: 40
+  #   params:
+  #     icon: archive
+  - identifier: nav.projects
+    name: Projects
+    pageRef: /projects
+    weight: 50
     params:
-      icon: archive
+      icon: projects
 
 # footer menu
 footer:
@@ -47,7 +52,7 @@ footer:
 # footer social link
 social:
   - name: GitHub
-    url: https://github.com/username
+    url: https://github.com/heuzef
     weight: 10
     params:
       icon: github

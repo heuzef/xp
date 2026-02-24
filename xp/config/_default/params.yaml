@@ -100,8 +100,8 @@ home:
   # You can add your custom content by creating files in `layouts/_partials/home/` folder, then add it to the list
   contentOrder:
     - author-section
-    - page-content
-    - recent-posts
+    # - page-content
+    # - recent-posts
     - featured-projects.html
 
 # Post configuration
@@ -172,7 +172,7 @@ analytics:
     enabled: true
     id: "7f39c497-42b4-4383-9362-e56fb1425123"
     src: "https://analytics.heuzef.com/script.js"
-    domains: "analytics.heuzef.com"
+    domains: "xp.heuzef.com"
 
 # KaTeX
 katex:
