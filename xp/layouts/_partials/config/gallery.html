@@ -1,0 +1,52 @@
+{{/* Gallery 配置管理 - 重构版 */}}
+{{ $globalGallery := site.Params.gallery | default dict }}
+{{ $globalLightbox := site.Params.lightbox | default dict }}
+
+{{ $pageGallery := .Params.gallery | default dict }}
+{{ $pageLightbox := .Params.lightbox | default dict }}
+
+{{/* 计算最终配置 */}}
+{{ $galleryEnabled := cond (isset $pageGallery "enabled") $pageGallery.enabled ($globalGallery.enabled | default false) }}
+{{ $lightboxEnabled := cond (isset $pageLightbox "enabled") $pageLightbox.enabled ($globalLightbox.enabled | default false) }}
+
+{{/* 合并配置对象 */}}
+{{ $galleryConfig := $globalGallery }}
+{{ if $pageGallery }}
+  {{ $galleryConfig = merge $galleryConfig $pageGallery }}
+{{ end }}
+
+{{ $lightboxConfig := $globalLightbox }}
+{{ if $pageLightbox }}
+  {{ $lightboxConfig = merge $lightboxConfig $pageLightbox }}
+{{ end }}
+
+{{/* 处理配置值 - 规范化键名为 camelCase */}}
+{{ $cleanGalleryConfig := dict }}
+{{ range $key, $value := $galleryConfig }}
+  {{ if ne $key "enabled" }}
+    {{ $cleanGalleryConfig = merge $cleanGalleryConfig (dict $key $value) }}
+  {{ end }}
+{{ end }}
+
+{{ $cleanLightboxConfig := dict }}
+{{ range $key, $value := $lightboxConfig }}
+  {{ if ne $key "enabled" }}
+    {{ $cleanLightboxConfig = merge $cleanLightboxConfig (dict $key $value) }}
+  {{ end }}
+{{ end }}
+
+{{/* 设置页面级变量 */}}
+{{ .Scratch.Set "galleryEnabled" $galleryEnabled }}
+{{ .Scratch.Set "lightboxEnabled" $lightboxEnabled }}
+{{ .Scratch.Set "galleryConfig" $cleanGalleryConfig }}
+{{ .Scratch.Set "lightboxConfig" $cleanLightboxConfig }}
+
+{{/* 生成 JavaScript 配置 */}}
+<script>
+  window.HUGO_GALLERY_CONFIG = {
+    gallery: {{ $galleryEnabled }},
+    lightbox: {{ $lightboxEnabled }},
+    galleryOptions: {{ $cleanGalleryConfig | jsonify }},
+    lightboxOptions: {{ $cleanLightboxConfig | jsonify }}
+  };
+</script>
