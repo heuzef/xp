@@ -2,87 +2,87 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on XP</title>
-    <link>http://localhost:1313/</link>
+    <link>https://xp.heuzef.com/</link>
     <description>Recent content in Home on XP</description>
     <generator>Hugo</generator>
     <language>fr-fr</language>
     <lastBuildDate>Wed, 31 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://xp.heuzef.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>首页</title>
-      <link>http://localhost:1313/_index.zh-cn/</link>
+      <link>https://xp.heuzef.com/_index.zh-cn/</link>
       <pubDate>Wed, 31 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/_index.zh-cn/</guid>
+      <guid>https://xp.heuzef.com/_index.zh-cn/</guid>
       <description>&lt;p&gt;🎉 &lt;strong&gt;网站全新改版！&lt;/strong&gt; 我们对网站进行了全面升级，带来了更快的加载速度、更美观的界面设计和更流畅的用户体验。欢迎探索新功能！&lt;/p&gt;</description>
     </item>
     <item>
       <title>Shortcodes</title>
-      <link>http://localhost:1313/posts/shortcodes/</link>
+      <link>https://xp.heuzef.com/posts/shortcodes/</link>
       <pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/shortcodes/</guid>
+      <guid>https://xp.heuzef.com/posts/shortcodes/</guid>
       <description>&lt;p&gt;This page demonstrates all available shortcodes in the Hugo Narrow theme.&lt;/p&gt;&#xA;&lt;h2 id=&#34;hugo-built-in-shortcodes&#34;&gt;Hugo Built-in Shortcodes&lt;/h2&gt;&#xA;&lt;p&gt;Hugo provides several &lt;a href=&#34;https://gohugo.io/shortcodes/&#34;target=&#34;_blank&#34;&#xA;  class=&#34;inline-flex items-center gap-1&#34;&#xA;&gt;built-in shortcodes&lt;svg class=&#34;h-3 w-3 flex-shrink-0&#34; id=&#34;external-link&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6&#34;/&gt;&lt;/svg&gt;&#xA;&lt;/a&gt;. The content of these shortcodes is subject to change without notice, so you can visit the official page for detailed usage instructions.&lt;/p&gt;</description>
     </item>
     <item>
       <title>短代码</title>
-      <link>http://localhost:1313/posts/%E7%9F%AD%E4%BB%A3%E7%A0%81/</link>
+      <link>https://xp.heuzef.com/posts/%E7%9F%AD%E4%BB%A3%E7%A0%81/</link>
       <pubDate>Fri, 26 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/%E7%9F%AD%E4%BB%A3%E7%A0%81/</guid>
+      <guid>https://xp.heuzef.com/posts/%E7%9F%AD%E4%BB%A3%E7%A0%81/</guid>
       <description>&lt;p&gt;本页面展示了 Hugo Narrow 主题中所有可用的短代码。&lt;/p&gt;&#xA;&lt;h2 id=&#34;hugo-内置短代码&#34;&gt;Hugo 内置短代码&lt;/h2&gt;&#xA;&lt;p&gt;Hugo 提供了一些&lt;a href=&#34;https://gohugo.io/shortcodes/&#34;target=&#34;_blank&#34;&#xA;  class=&#34;inline-flex items-center gap-1&#34;&#xA;&gt;内置短代码&lt;svg class=&#34;h-3 w-3 flex-shrink-0&#34; id=&#34;external-link&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6&#34;/&gt;&lt;/svg&gt;&#xA;&lt;/a&gt;，这些内容不稳定并且随时可能变化，你可以访问页面找到详细使用说明。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hugo - The World&#39;s Fastest Framework</title>
-      <link>http://localhost:1313/projects/hugo-framework/</link>
+      <link>https://xp.heuzef.com/projects/hugo-framework/</link>
       <pubDate>Tue, 20 Feb 2024 14:30:00 +0800</pubDate>
-      <guid>http://localhost:1313/projects/hugo-framework/</guid>
+      <guid>https://xp.heuzef.com/projects/hugo-framework/</guid>
       <description>A fast and flexible static site generator built with Go, powering thousands of websites worldwide.</description>
     </item>
     <item>
       <title>Image Gallery</title>
-      <link>http://localhost:1313/posts/image-gallery/</link>
+      <link>https://xp.heuzef.com/posts/image-gallery/</link>
       <pubDate>Tue, 16 Jan 2024 22:30:00 +0800</pubDate>
-      <guid>http://localhost:1313/posts/image-gallery/</guid>
-      <description>&lt;h1 id=&#34;image-rendering-test&#34;&gt;Image Rendering Test&lt;/h1&gt;&#xA;&lt;p&gt;The Demo comes from &lt;a href=&#34;https://www.lightgalleryjs.com/demos/thumbnails/&#34;target=&#34;_blank&#34;&#xA;  class=&#34;inline-flex items-center gap-1&#34;&#xA;&gt;LightGallery&lt;svg class=&#34;h-3 w-3 flex-shrink-0&#34; id=&#34;external-link&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6&#34;/&gt;&lt;/svg&gt;&#xA;&lt;/a&gt;&#xA;All images are from &lt;a href=&#34;https://unsplash.com/&#34;target=&#34;_blank&#34;&#xA;  class=&#34;inline-flex items-center gap-1&#34;&#xA;&gt;Unsplash&lt;svg class=&#34;h-3 w-3 flex-shrink-0&#34; id=&#34;external-link&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6&#34;/&gt;&lt;/svg&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;single-image&#34;&gt;Single Image&lt;/h2&gt;&#xA;&lt;p&gt;&#xA;&lt;figure class=&#34;image-figure not-prose my-8&#34;&#xA;        data-lightbox-enabled=&#34;true&#34;&#xA;        data-gallery-type=&#34;auto&#34;&#xA;        data-image-width=&#34;0&#34;&#xA;        data-image-height=&#34;0&#34;&#xA;        data-image-src=&#34;http://localhost:1313/posts/image-gallery/bundle.avif&#34;&gt;&#xA;  &lt;div class=&#34;image-container&#34;&gt;&#xA;    &lt;img&#xA;    src=&#34;http://localhost:1313/posts/image-gallery/bundle.avif&#34;&#xA;    alt=&#34;https://unsplash.com/@danielleone)&#34;&#xA;    title=&#34;Photo by - Daniel Leone&#34;&#xA;    &#xA;      &#xA;      &#xA;    &#xA;    loading=&#34;lazy&#34;&#xA;    decoding=&#34;async&#34;&#xA;    data-gallery-src=&#34;http://localhost:1313/posts/image-gallery/bundle.avif&#34;&#xA;    data-gallery-alt=&#34;https://unsplash.com/@danielleone)&#34;&#xA;    data-gallery-title=&#34;Photo by - Daniel Leone&#34; /&gt;&lt;/div&gt;&#xA;&#xA;  &lt;figcaption class=&#34;image-caption&#34;&gt;&#xA;      Photo by - Daniel Leone&#xA;    &lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;</description>
+      <guid>https://xp.heuzef.com/posts/image-gallery/</guid>
+      <description>&lt;h1 id=&#34;image-rendering-test&#34;&gt;Image Rendering Test&lt;/h1&gt;&#xA;&lt;p&gt;The Demo comes from &lt;a href=&#34;https://www.lightgalleryjs.com/demos/thumbnails/&#34;target=&#34;_blank&#34;&#xA;  class=&#34;inline-flex items-center gap-1&#34;&#xA;&gt;LightGallery&lt;svg class=&#34;h-3 w-3 flex-shrink-0&#34; id=&#34;external-link&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6&#34;/&gt;&lt;/svg&gt;&#xA;&lt;/a&gt;&#xA;All images are from &lt;a href=&#34;https://unsplash.com/&#34;target=&#34;_blank&#34;&#xA;  class=&#34;inline-flex items-center gap-1&#34;&#xA;&gt;Unsplash&lt;svg class=&#34;h-3 w-3 flex-shrink-0&#34; id=&#34;external-link&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6&#34;/&gt;&lt;/svg&gt;&#xA;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;single-image&#34;&gt;Single Image&lt;/h2&gt;&#xA;&lt;p&gt;&#xA;&lt;figure class=&#34;image-figure not-prose my-8&#34;&#xA;        data-lightbox-enabled=&#34;true&#34;&#xA;        data-gallery-type=&#34;auto&#34;&#xA;        data-image-width=&#34;0&#34;&#xA;        data-image-height=&#34;0&#34;&#xA;        data-image-src=&#34;https://xp.heuzef.com/posts/image-gallery/bundle.avif&#34;&gt;&#xA;  &lt;div class=&#34;image-container&#34;&gt;&#xA;    &lt;img&#xA;    src=&#34;https://xp.heuzef.com/posts/image-gallery/bundle.avif&#34;&#xA;    alt=&#34;https://unsplash.com/@danielleone)&#34;&#xA;    title=&#34;Photo by - Daniel Leone&#34;&#xA;    &#xA;      &#xA;      &#xA;    &#xA;    loading=&#34;lazy&#34;&#xA;    decoding=&#34;async&#34;&#xA;    data-gallery-src=&#34;https://xp.heuzef.com/posts/image-gallery/bundle.avif&#34;&#xA;    data-gallery-alt=&#34;https://unsplash.com/@danielleone)&#34;&#xA;    data-gallery-title=&#34;Photo by - Daniel Leone&#34; /&gt;&lt;/div&gt;&#xA;&#xA;  &lt;figcaption class=&#34;image-caption&#34;&gt;&#xA;      Photo by - Daniel Leone&#xA;    &lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hugo Narrow Theme</title>
-      <link>http://localhost:1313/projects/hugo-narrow-theme/</link>
+      <link>https://xp.heuzef.com/projects/hugo-narrow-theme/</link>
       <pubDate>Mon, 15 Jan 2024 10:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/projects/hugo-narrow-theme/</guid>
+      <guid>https://xp.heuzef.com/projects/hugo-narrow-theme/</guid>
       <description>A modern Hugo theme with multiple color schemes, dark mode support, and responsive design built on TailwindCSS 4.</description>
     </item>
     <item>
       <title>Markdown Syntax Guide</title>
-      <link>http://localhost:1313/posts/markdown-syntax-guide/</link>
+      <link>https://xp.heuzef.com/posts/markdown-syntax-guide/</link>
       <pubDate>Mon, 15 Jan 2024 10:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/posts/markdown-syntax-guide/</guid>
+      <guid>https://xp.heuzef.com/posts/markdown-syntax-guide/</guid>
       <description>This is a post which includes all available Markdown syntax.</description>
     </item>
     <item>
       <title>Markdown 语法指南</title>
-      <link>http://localhost:1313/posts/markdown-%E8%AF%AD%E6%B3%95%E6%8C%87%E5%8D%97/</link>
+      <link>https://xp.heuzef.com/posts/markdown-%E8%AF%AD%E6%B3%95%E6%8C%87%E5%8D%97/</link>
       <pubDate>Mon, 15 Jan 2024 10:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/posts/markdown-%E8%AF%AD%E6%B3%95%E6%8C%87%E5%8D%97/</guid>
+      <guid>https://xp.heuzef.com/posts/markdown-%E8%AF%AD%E6%B3%95%E6%8C%87%E5%8D%97/</guid>
       <description>这是一篇包含各种 Markdown 语法的文章。</description>
     </item>
     <item>
       <title>关于</title>
-      <link>http://localhost:1313/about/_index.zh-cn/</link>
+      <link>https://xp.heuzef.com/about/_index.zh-cn/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/about/_index.zh-cn/</guid>
+      <guid>https://xp.heuzef.com/about/_index.zh-cn/</guid>
       <description>了解 Hugo Narrow 主题及其技术栈</description>
     </item>
     <item>
       <title>归档</title>
-      <link>http://localhost:1313/archives/_index.zh-cn/</link>
+      <link>https://xp.heuzef.com/archives/_index.zh-cn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/archives/_index.zh-cn/</guid>
+      <guid>https://xp.heuzef.com/archives/_index.zh-cn/</guid>
       <description></description>
     </item>
     <item>
       <title>项目</title>
-      <link>http://localhost:1313/projects/%E9%A1%B9%E7%9B%AE/</link>
+      <link>https://xp.heuzef.com/projects/%E9%A1%B9%E7%9B%AE/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/%E9%A1%B9%E7%9B%AE/</guid>
+      <guid>https://xp.heuzef.com/projects/%E9%A1%B9%E7%9B%AE/</guid>
       <description>&lt;p&gt;欢迎来到我的项目展示！在这里您将找到我的作品集合，包括 Web 应用程序、开源贡献和实验性项目。&lt;/p&gt;</description>
     </item>
   </channel>
