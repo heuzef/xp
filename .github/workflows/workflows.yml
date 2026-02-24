@@ -17,4 +17,4 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            sudo -u ${{ secrets.SSH_USER }} -H bash -l -c 'cd /home/${{ secrets.SSH_USER }}/GIT/pinyin && git pull'
+            sudo -u ${{ secrets.SSH_USER }} -H bash -l -c 'cd /home/${{ secrets.SSH_USER }}/GIT/xp && git pull'
