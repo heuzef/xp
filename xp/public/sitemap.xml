@@ -2,93 +2,93 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://xp.heuzef.com/</loc>
     <lastmod>2025-12-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/_index.zh-cn/</loc>
+    <loc>https://xp.heuzef.com/_index.zh-cn/</loc>
     <lastmod>2025-12-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://xp.heuzef.com/categories/</loc>
     <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://xp.heuzef.com/posts/</loc>
     <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/series/</loc>
+    <loc>https://xp.heuzef.com/series/</loc>
     <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/shortcode/</loc>
+    <loc>https://xp.heuzef.com/categories/shortcode/</loc>
     <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/shortcode/</loc>
+    <loc>https://xp.heuzef.com/tags/shortcode/</loc>
     <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/shortcodes/</loc>
+    <loc>https://xp.heuzef.com/posts/shortcodes/</loc>
     <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://xp.heuzef.com/tags/</loc>
     <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/series/test/</loc>
+    <loc>https://xp.heuzef.com/series/test/</loc>
     <lastmod>2025-12-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/go/</loc>
+    <loc>https://xp.heuzef.com/tags/go/</loc>
     <lastmod>2024-02-20T14:30:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/hugo/</loc>
+    <loc>https://xp.heuzef.com/tags/hugo/</loc>
     <lastmod>2024-02-20T14:30:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/hugo-framework/</loc>
+    <loc>https://xp.heuzef.com/projects/hugo-framework/</loc>
     <lastmod>2024-02-20T14:30:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/projects/</loc>
+    <loc>https://xp.heuzef.com/categories/projects/</loc>
     <lastmod>2024-02-20T14:30:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/</loc>
+    <loc>https://xp.heuzef.com/projects/</loc>
     <lastmod>2024-02-20T14:30:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/gallery/</loc>
+    <loc>https://xp.heuzef.com/categories/gallery/</loc>
     <lastmod>2024-01-16T22:30:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/gallery/</loc>
+    <loc>https://xp.heuzef.com/tags/gallery/</loc>
     <lastmod>2024-01-16T22:30:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/image-gallery/</loc>
+    <loc>https://xp.heuzef.com/posts/image-gallery/</loc>
     <lastmod>2024-01-16T22:30:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/hugo-narrow-theme/</loc>
+    <loc>https://xp.heuzef.com/projects/hugo-narrow-theme/</loc>
     <lastmod>2024-01-15T10:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/markdown/</loc>
+    <loc>https://xp.heuzef.com/categories/markdown/</loc>
     <lastmod>2024-01-15T10:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/markdown/</loc>
+    <loc>https://xp.heuzef.com/tags/markdown/</loc>
     <lastmod>2024-01-15T10:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/markdown-syntax-guide/</loc>
+    <loc>https://xp.heuzef.com/posts/markdown-syntax-guide/</loc>
     <lastmod>2024-01-15T10:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/tailwind-css/</loc>
+    <loc>https://xp.heuzef.com/tags/tailwind-css/</loc>
     <lastmod>2024-01-15T10:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://xp.heuzef.com/about/</loc>
     <lastmod>2024-01-01T00:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/_index.zh-cn/</loc>
+    <loc>https://xp.heuzef.com/about/_index.zh-cn/</loc>
     <lastmod>2024-01-01T00:00:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/archives/</loc>
+    <loc>https://xp.heuzef.com/archives/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/web-%E5%BC%80%E5%8F%91/</loc>
+    <loc>https://xp.heuzef.com/tags/web-%E5%BC%80%E5%8F%91/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/%E5%9B%BE%E5%BA%93/</loc>
+    <loc>https://xp.heuzef.com/categories/%E5%9B%BE%E5%BA%93/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/%E5%9B%BE%E5%BA%93/</loc>
+    <loc>https://xp.heuzef.com/tags/%E5%9B%BE%E5%BA%93/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</loc>
+    <loc>https://xp.heuzef.com/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</loc>
   </url><url>
-    <loc>http://localhost:1313/archives/_index.zh-cn/</loc>
+    <loc>https://xp.heuzef.com/archives/_index.zh-cn/</loc>
   </url><url>
-    <loc>http://localhost:1313/projects/%E9%A1%B9%E7%9B%AE/</loc>
+    <loc>https://xp.heuzef.com/projects/%E9%A1%B9%E7%9B%AE/</loc>
   </url>
 </urlset>
