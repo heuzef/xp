@@ -1,22 +1,23 @@
 ---
 dismissible: true
-date: 2025-12-31
+date: 2026-05-01
 title: "Home"
 author:
-  name: "Hugo Narrow"
-  title: "A Clean and Minimal Hugo Theme"
-  description: "Focused on content and user experience."
-  avatar: "/images/avatar.svg"
+  name: "Mes projets"
+  title: "Présentation de mes projets personnels et professionnels."
+  description: "Axé sur le contenu et l'expérience utilisateur."
+  avatar: "/assets/anvil.svg"
   social:
     - name: "GitHub"
-      url: "https://github.com/tom2almighty/hugo-narrow"
+      url: "https://github.com/heuzef/"
       icon: "github"
-    - name: "Twitter"
-      url: "https://twitter.com/username"
-      icon: "twitter"
+    - name: "LinkedIn"
+      url: "https://linkedin.com/in/heuzef/"
+      icon: "linkedin"
     - name: "Email"
-      url: "mailto:hello@example.com"
+      url: "mailto:contact@heuzef.com"
       icon: "email"
+    - name: "Website"
+      url: "https://heuzef.com"
+      icon: "website"
 ---
-
-🎉 **Site Redesign!** We've completely revamped our website with faster loading speeds, a beautiful new interface, and smoother user experience. Welcome to explore the new features!
