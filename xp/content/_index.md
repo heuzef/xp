@@ -6,7 +6,7 @@ author:
   name: "Mes projets"
   title: "Présentation de mes projets personnels et professionnels."
   description: "Axé sur le retour d'expérience."
-  avatar: "/anvil.svg"
+  avatar: "/images/anvil.svg"
   social:
     - name: "GitHub"
       url: "https://github.com/heuzef/"
