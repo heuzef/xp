@@ -8,6 +8,5 @@ tags: ["tags 1", "tags 2"]
 cover: ""
 url: "heuzef.com"
 status: "in_progress" # Options: completed, in_progress, planning
-mermaid: # charts
-  enabled: true
+mermaid: true # charts
 ---
