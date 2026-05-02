@@ -5,18 +5,18 @@ defaultAuthor: "Heuzef"
 language: "fr-fr"
 shortName: "Heuzef" # PWA
 images:
-  - "/assets/anvil.svg"
+  - "/anvil.svg"
 
 # Favicon
 favicon:
-  svg: "/assets/anvil.svg" # SVG format favicon (recommended)
+  svg: "/anvil.svg" # SVG format favicon (recommended)
 
 # Author info
 author:
   name: "Heuzef"
   title: "XP"
   description: "Mon portfolio de projets."
-  avatar: "/assets/photos.jpg"
+  avatar: "/photos.jpg"
   social:
     - name: "GitHub"
       url: "https://github.com/heuzef"
@@ -35,7 +35,7 @@ author:
 header:
   sticky: true # Enable sticky navigation bar
   logo:
-    image: "/assets/photo.jpg" # Logo path relative to static folder, leave empty to use site title first letter
+    image: "/photo.jpg" # Logo path relative to static folder, leave empty to use site title first letter
     link: "/" # Click to home page
   # UI Components Control (header controls)
   showThemeSwitch: true # Set to false to hide theme style switcher (palette icon)
