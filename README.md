@@ -15,4 +15,5 @@ git submodule add https://github.com/tom2almighty/hugo-narrow.git xp/themes/hugo
 ```sh
 # https://hugo-narrow-docs.vercel.app/docs/archetypes/#create-a-new-project
 hugo new content projects/my-super-project.md
+git add --all ; git commit -m "Create new project" ; git push
 ```
