@@ -3,8 +3,8 @@ title: "短代码"
 date: 2025-12-26
 draft: false
 description: "Hugo Narrow 主题可用的短代码"
-tags: ["shortcode"]
-categories: ["shortcode"]
+# tags: ["shortcode"]
+# categories: ["shortcode"]
 ---
 
 本页面展示了 Hugo Narrow 主题中所有可用的短代码。

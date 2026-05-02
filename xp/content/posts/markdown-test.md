@@ -3,8 +3,8 @@ title: "Markdown Syntax Guide"
 date: 2024-01-15T10:00:00+08:00
 draft: false
 summary: "This is a post which includes all available Markdown syntax."
-categories: ["Markdown"]
-tags: ["markdown"]
+# categories: ["Markdown"]
+# tags: ["markdown"]
 ---
 
 # Heading 1
@@ -230,5 +230,3 @@ You can include any Markdown syntax here:
 - `Code`
 
 </details>
-
-

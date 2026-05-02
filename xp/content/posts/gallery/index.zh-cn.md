@@ -3,8 +3,8 @@ title: "图库"
 date: 2024-01-16T22:30:00+08:00
 draft: false
 description: "图库示例，包含两端对其的图库和使用短代码的瀑布流图库"
-tags: ["图库"]
-categories: ["图库"]
+# tags: ["图库"]
+# categories: ["图库"]
 cover: bundle.avif
 lightbox:
   enabled: true
@@ -28,5 +28,3 @@ justified_gallery:
 ![https://unsplash.com/@flovayn](images/06.avif "摄影师 -  Florian van Duyn")
 ![https://unsplash.com/@juanster](images/07.avif "摄影师 - Juan Davila")
 ![https://unsplash.com/@davidmarcu](images/08.avif "摄影师 - David Marcu")
-
-

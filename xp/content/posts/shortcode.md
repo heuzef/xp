@@ -3,8 +3,8 @@ title: "Shortcodes"
 date: 2025-12-26
 draft: false
 description: "A complete guide to all available shortcodes for the Hugo Narrow theme"
-tags: ["shortcode"]
-categories: ["shortcode"]
+# tags: ["shortcode"]
+# categories: ["shortcode"]
 series: ["Test"]
 series_order: 3
 ---

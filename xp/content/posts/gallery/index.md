@@ -3,8 +3,8 @@ title: "Image Gallery"
 date: 2024-01-16T22:30:00+08:00
 draft: false
 description: "Image Gallery includes justified layout gallery with markdown and masonry gallery with shortcodes."
-tags: ["gallery"]
-categories: ["gallery"]
+# tags: ["gallery"]
+# categories: ["gallery"]
 cover: bundle.avif
 lightbox:
   enabled: true
