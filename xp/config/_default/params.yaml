@@ -9,7 +9,7 @@ images:
 
 # Favicon
 favicon:
-  svg: "/favicon.svg" # SVG format favicon (recommended)
+  svg: "/assets/anvil.svg" # SVG format favicon (recommended)
 
 # Author info
 author:
@@ -21,9 +21,15 @@ author:
     - name: "GitHub"
       url: "https://github.com/heuzef"
       icon: "github"
+    - name: "LinkedIn"
+      url: "https://www.linkedin.com/in/heuzef/"
+      icon: "linkedin"
     - name: "Email"
       url: "mailto:contact@heuzef.com"
       icon: "email"
+    - name: "Website"
+      url: "https://heuzef.com"
+      icon: "website"
 
 # Header configuration (modularized)
 header:
