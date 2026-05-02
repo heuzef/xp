@@ -66,3 +66,8 @@ social:
     weight: 30
     params:
       icon: email
+  - name: "Website"
+    url: "https://heuzef.com"
+    weight: 40
+    params:
+      icon: website

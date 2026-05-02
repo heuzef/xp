@@ -1,11 +1,11 @@
 # Basic site info with SEO
-description: "A modern, clean, and minimal Hugo theme built with Tailwind CSS 4.0. Support custom themes, dark mode, and responsive design."
+description: "Présentation de mes projets personnels et professionnels. Axé sur le retour d'expérience."
 keywords: ["Heuzef", "XP",  "Projects", "Projets"]
 defaultAuthor: "Heuzef"
 language: "fr-fr"
 shortName: "Heuzef" # PWA
 images:
-  - "/images/og-default.avif"
+  - "/assets/anvil.svg"
 
 # Favicon
 favicon:
@@ -16,7 +16,7 @@ author:
   name: "Heuzef"
   title: "XP"
   description: "Mon portfolio de projets."
-  avatar: "/images/avatar.svg"
+  avatar: "/assets/photos.jpg"
   social:
     - name: "GitHub"
       url: "https://github.com/heuzef"
@@ -35,12 +35,12 @@ author:
 header:
   sticky: true # Enable sticky navigation bar
   logo:
-    image: "/images/logo.svg" # Logo path relative to static folder, leave empty to use site title first letter
+    image: "/assets/photo.jpg" # Logo path relative to static folder, leave empty to use site title first letter
     link: "/" # Click to home page
   # UI Components Control (header controls)
   showThemeSwitch: true # Set to false to hide theme style switcher (palette icon)
   showDarkModeSwitch: true # Set to false to hide dark mode switcher (sun/moon icon)
-  showLanguageSwitch: true # Set to false to hide language switcher
+  showLanguageSwitch: false # Set to false to hide language switcher
   languageSwitchMode: "dropdown" # Language switch mode: "dropdown" (show panel) or "cycle" (direct cycle)
 
 # Dock display mode
@@ -99,7 +99,7 @@ themes:
 
 # Home page configuration
 home:
-  recentPostsCount: 5 # Number of recent posts to show on the home page
+  recentPostsCount: 3 # Number of recent posts to show on the home page
 
   # Content order configuration - customize the order of home page sections
   # Available sections: author-section, recent-posts, featured-projects, page-content
