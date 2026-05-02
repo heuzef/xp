@@ -5,7 +5,7 @@ title: "Home"
 author:
   name: "Mes projets"
   title: "Présentation de mes projets personnels et professionnels."
-  description: "Axé sur le contenu et l'expérience utilisateur."
+  description: "Axé sur le retour d'expérience."
   avatar: "/assets/anvil.svg"
   social:
     - name: "GitHub"
