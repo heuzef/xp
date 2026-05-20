@@ -1,6 +1,5 @@
 ---
 title: 'Champi-CNN'
-description: "Conception d’un modèle CNN"
 summary: "Conception d’un modèle CNN pour la reconnaissance des champignons"
 date: '2024-11-01T00:00:00+02:00'
 draft: false
