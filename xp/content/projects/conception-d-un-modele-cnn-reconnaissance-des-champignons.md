@@ -1,6 +1,7 @@
 ---
 title: 'Champi-CNN'
 summary: "Conception d’un modèle CNN pour la reconnaissance des champignons"
+featured: true
 date: '2024-11-01T00:00:00+02:00'
 draft: false
 slug: champi-cnn
@@ -8,7 +9,6 @@ tags: ["datascience", "cnn", "deep-learning", "keras", "python", "opencv", "scra
 cover: "images/champi-cnn.jpg"
 link: "https://github.com/heuzef/champi_cnn"
 status: "completed" # Options: completed, in_progress, planning
-mermaid: true # charts
 ---
 ## Contexte
 

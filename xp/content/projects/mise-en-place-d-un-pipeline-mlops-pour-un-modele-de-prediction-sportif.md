@@ -1,6 +1,7 @@
 ---
 title: 'Parivision'
 summary: "Mise en production d'un pipeline MLOps pour une application de prédiction sportif"
+featured: true
 date: '2025-05-19T00:00:00+02:00'
 draft: false
 slug: parivision
@@ -8,7 +9,6 @@ tags: ["mlops", "python", "webinaire","conteneurisation", "database", "ci-cd", "
 cover: "images/parivision.png"
 link: "https://github.com/heuzef/DEC24_MLOPS_PARIS_SPORTIFS"
 status: "completed" # Options: completed, in_progress, planning
-mermaid: true # charts
 ---
 ## Contexte
 Le projet PariVision vise à exploiter le potentiel des données massives de la NBA pour prédire la réussite des tirs et les résultats des matchs grâce au machine learning et aux pratiques MLOps. Dans un contexte où chaque action de jeu a des impacts sportifs, économiques et émotionnels, il s’agit de modéliser des facteurs complexes (position, défense, contexte du match) à l’aide d’un système prédictif robuste, évolutif et automatisé. Ce projet couvre toute la chaîne de valeur de la data, de la préparation des données au déploiement et au monitoring du modèle, afin de fournir un cadre réutilisable pour l’analyse de performance sportive, tout en répondant aux enjeux techniques, opérationnels et éthiques du secteur.
