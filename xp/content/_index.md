@@ -3,9 +3,9 @@ dismissible: true
 date: 2026-05-01
 title: "Home"
 author:
-  name: "Mes projets"
-  title: "Présentation de mes projets personnels et professionnels."
-  description: "Axé sur le retour d'expérience."
+  name: "Heuze Florent"
+  title: "Présentation de mes projets personnels et professionnels. Axé sur le retour d'expérience."
+  description: "[VOIR LES PROJETS](/projects)"
   avatar: "/images/photo.jpg"
   social:
     - name: "GitHub"
