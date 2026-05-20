@@ -5,7 +5,7 @@ title: "Home"
 author:
   name: "Heuze Florent"
   title: "Présentation de mes projets personnels et professionnels. Axé sur le retour d'expérience."
-  description: "[VOIR LES PROJETS](/projects)"
+  description: ""
   avatar: "/images/photo.jpg"
   social:
     - name: "GitHub"
