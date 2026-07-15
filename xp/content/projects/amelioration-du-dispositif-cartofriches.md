@@ -2,7 +2,7 @@
 title: 'Amélioration du dispositif Cartofriches'
 summary: "Création d'un service d'accompagnement au lancement de projet depuis le dispositif Cartofriches"
 featured: true
-date: '2026-01-02T00:00:00+01:00'
+date: '2026-02-01T00:00:00+02:00'
 draft: false
 slug: profil-cartofriches
 tags: ["data-product-management", "methodes-agiles", "analyse-de-donnees", "analyse-des-besoins", "datascience", "service-public", "friches", "sig"]
