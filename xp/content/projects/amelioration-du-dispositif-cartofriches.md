@@ -6,7 +6,7 @@ date: '2026-02-01T00:00:00+01:00'
 draft: false
 slug: profil-cartofriches
 tags: ["data-product-management", "methodes-agiles", "analyse-de-donnees", "analyse-des-besoins", "datascience", "service-public", "friches", "sig"]
-cover: ""
+cover: "images/profil-cartofriches.png"
 link: "https://github.com/heuzef/cartofriches/tree/PROFIL/profil"
 status: "completed" # Options: completed, in_progress, planning
 ---
