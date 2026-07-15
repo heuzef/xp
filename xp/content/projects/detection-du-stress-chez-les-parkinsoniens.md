@@ -2,7 +2,7 @@
 title: 'Datathon 2025'
 summary: "Détection du stress chez les Parkinsoniens"
 featured: true
-date: '2025-06-20T00:00:00+02:00'
+date: '2025-04-06T00:00:00+02:00'
 draft: false
 slug: datathon-2025
 tags: ["datascience", "opencv", "python", "computer-vision", "sante", "hackathon", "management", "data-product-management"]
@@ -23,11 +23,11 @@ En tant que Data Product Manager et Data Scientist sur ce projet, j'ai contribu�
 La force de ce projet réside dans la complémentarité de l'équipe, réunissant des profils médicaux, techniques et pédagogiques :
 
 * **Vincent DIEP** — Docteur en rhumatologie
-* **Julie JOST** — Médecin, transformation des parcours de santé des personnes âgées, innovation & stratégie en santé
-* **Dr Imad SFEIR** — Directeur Médical et Innovation en santé chez Vyv3 Bourgogne
+* **Julie JOST** — Médecin
+* **Imad SFEIR** — Médecin
 * **Amine BOHI** — Enseignant-Chercheur
-* **Véronique DUGOUJON** — Formatrice IA Générative & Santé, conférencière et consultante
-* **Heni LACHOUAK** — Machine Learning Engineer, spécialisé en computer vision
-* **Jürgens TYLL** — Alternant Data Scientist, MSc Quantitative Finance & Big Data (NEOMA Business School)
+* **Véronique DUGOUJON** — Conférencière
+* **Heni LACHOUAK** — Machine Learning Engineer
+* **Jürgens TYLL** — Data Scientist
 * **Léo MEILLIER** — Étudiant
-* **Lou-Anne VAULOT** — Étudiante à l'ESEO
+* **Lou-Anne VAULOT** — Étudiante
