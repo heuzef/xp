@@ -1,7 +1,7 @@
 ---
 title: 'Datathon 2025'
 summary: "Détection du stress chez les Parkinsoniens"
-featured: true
+featured: false
 date: '2025-04-06T00:00:00+02:00'
 draft: false
 slug: datathon-2025
