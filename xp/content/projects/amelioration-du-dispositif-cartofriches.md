@@ -1,6 +1,6 @@
 ---
-title: 'Amélioration du dispositif Cartofriches (pour le compte du CEREMA)'
-summary: "PROFIL : un service d'accompagnement au lancement de projet depuis le dispositif Cartofriches"
+title: 'Amélioration du dispositif Cartofriches'
+summary: "Création d'un service d'accompagnement au lancement de projet depuis le dispositif Cartofriches"
 featured: true
 date: '2026-02-01T00:00:00+01:00'
 draft: false
@@ -16,30 +16,27 @@ status: "completed" # Options: completed, in_progress, planning
 
 Ce produit est né dans le cadre d'un projet de formation DPM (Pilotage de Produit Data) dont l'objectif pédagogique est de trouver des axes d'amélioration du dispositif Cartofriches pour le compte du [CEREMA](https://www.cerema.fr).
 
-Le projet s'est déroulé de **mars 2025 à février 2026**.
-
-## Compétences mobilisées
-
-* Data Product Manager
-* Data Scientist
-* Méthodes agiles
-* Analyse des données
-* Analyse des besoins
-
-## Les contributeurs du projet
+## L'équipe
 
 Ce projet a été mené aux côtés de contributeurs aux profils complémentaires :
 
-* **Frédéric Vincent** — Consultant en Ingénierie de la Connaissance
-* **Pierre Cohen** — Responsable pôle Pilotage / Senior Developer full stack
-* **Julien Lienhard** — Product Team Lead / Product Manager
+* **Frédéric Vincent** — Consultant
+* **Pierre Cohen** — Senior Developer full stack
+* **Julien Lienhard** — Product Manager
 * **Rova Ralaimidona** — Data Analyst
-* **Marine Faucher** — Géomaticienne / Développeuse SIG chez Makina Corpus
-* **Salomé Deschênes** — Urbaniste, cheffe de produit (UrbanVitaliz, Recommandations-Collaboratives, CEREMA)
-* **Mathieu Rajerison** — Directeur de Projet Ingénierie de la Donnée & Innovation chez CEREMA
+* **Marine Faucher** — Géomaticienne
+* **Salomé Deschênes** — Urbaniste
+* **Mathieu Rajerison** — Ingénieur de la Donnée
 
 ## Ressources
 
-* [Dépôt Git du projet](https://github.com/heuzef/cartofriches/tree/PROFIL/profil)
 * [Diaporama de présentation du projet](https://github.com/heuzef/cartofriches/blob/PROFIL/profil/diaporama_mar25_dpm_cartofriches_1.pdf)
-* [Article concernant l'expérience complète](https://heuzef.com/notes/innover-par-le-traitement-de-la-donnee-pour-le-service-public/)
+* [Dépôt Git du projet](https://github.com/heuzef/cartofriches/tree/PROFIL/profil)
+
+## Retour d’expérience
+
+L’IA s’accélère à une vitesse fulgurante, le fossé entre les fantasmes qui entourent ses capacités et la réalité tangible d’une mise en production concrète reste considérable. C’est précisément cette disparité, bien éloignée de l’idéal théorique, à laquelle notre équipe a fait face à travers notre projet ambitieux : l’amélioration du dispositif Cartofriches pour le compte du CEREMA, un outil de service public crucial pour l’identification et la valorisation des friches.
+
+En nous immergeant dans les complexités opérationnelles de Cartofriches, notre projet a eu pour but de combler ce fossé, démontrant comment le traitement pratique de la donnée peut véritablement transformer les services publics, passant de la théorie à une réalité concrète.
+
+* [Lire l'article complet ...](https://heuzef.com/notes/innover-par-le-traitement-de-la-donnee-pour-le-service-public)
