@@ -50,3 +50,19 @@ mv hugo-narrow.bak/ hugo-narrow
 cd ../../
 hugo server
 ```
+
+## Watch for a compatible Hugo version in the Ubuntu apt repository
+
+Hugo-Narrow sometimes requires a newer Hugo version than the one currently packaged for Ubuntu (`apt install hugo`). `scripts/check-hugo-version.sh` checks the version apt would install against a required minimum, and only prints something when a satisfying version has landed:
+
+```sh
+bash scripts/check-hugo-version.sh 0.158.0
+```
+
+To be notified automatically once it's available, schedule it with cron on a host where apt already knows about the package (run `sudo apt-get update` beforehand, or add it to the cron line). Cron only mails its output when there is some, so this stays silent until an update is ready:
+
+```sh
+# crontab -e
+0 8 * * * apt-get update -qq && /path/to/xp/scripts/check-hugo-version.sh 0.158.0
+```
+
