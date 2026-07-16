@@ -1,7 +1,7 @@
 ---
 title: 'Parivision'
 summary: "Mise en production d'un pipeline MLOps pour une application de prédiction sportif"
-featured: true
+featured: false
 date: '2025-05-19T00:00:00+02:00'
 draft: false
 slug: parivision
