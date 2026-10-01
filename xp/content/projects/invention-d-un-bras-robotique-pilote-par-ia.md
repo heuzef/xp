@@ -2,7 +2,7 @@
 title: 'Invention d''un bras robotique piloté par IA'
 summary: "Présentation du Caligraphomate, projet dans le cadre du Hackathon HACK1ROBO 2025"
 featured: false
-date: '2025-11-01T00:00:00+01:00'
+date: '2025-11-01T00:00:00+02:00'
 draft: false
 slug: caligraphomate
 tags: ["hackathon", "robotique", "analyse-de-donnees", "fastapi", "data-product-management", "pao", "datascience", "exploration-des-donnees", "gestion-de-projet", "methodes-agiles", "python", "opencv", "linux", "cnn", "deep-learning", "apprentissage-supervise", "management"]
