@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3f8fd"/><stop offset="1" stop-color="#e6f0fa"/></linearGradient>
+<linearGradient id="srv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#cfe3f7"/><stop offset="1" stop-color="#9cc3ea"/></linearGradient>
+<linearGradient id="old" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e3e9f0"/><stop offset="1" stop-color="#c3cdd8"/></linearGradient>
+<linearGradient id="arr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2bb5a8" stop-opacity="0.3"/><stop offset="1" stop-color="#2bb5a8"/></linearGradient>
+<linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffc766"/><stop offset="1" stop-color="#f29a2e"/></linearGradient>
+<filter id="sh" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#3d6c9c" flood-opacity="0.18"/></filter>
+<g id="unit"><rect x="0" y="0" width="200" height="70" rx="12" fill="#eaf3fc" stroke="#7fa9d6" stroke-width="3"/><circle cx="26" cy="35" r="7" fill="#2bb5a8"/><circle cx="50" cy="35" r="7" fill="#f29a2e"/><rect x="90" y="24" width="90" height="6" rx="3" fill="#9cc3ea"/><rect x="90" y="40" width="90" height="6" rx="3" fill="#9cc3ea"/></g>
+<g id="ounit"><rect x="0" y="0" width="120" height="44" rx="8" fill="#eef2f6" stroke="#b3bfcc" stroke-width="3"/><circle cx="18" cy="22" r="5" fill="#b3bfcc"/><rect x="54" y="15" width="54" height="5" rx="2.5" fill="#c8d2dd"/><rect x="54" y="25" width="54" height="5" rx="2.5" fill="#c8d2dd"/></g>
+<g id="badge"><circle r="58" fill="#fff" filter="url(#sh)"/></g>
+<path id="chev" d="M0 -14 L18 0 L0 14" fill="none" stroke="url(#arr)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<circle cx="800" cy="460" r="330" fill="#dbe9f7" opacity="0.6"/>
+<ellipse cx="800" cy="720" rx="200" ry="18" fill="#bcd3ea" opacity="0.6"/>
+<ellipse cx="500" cy="700" rx="110" ry="12" fill="#c8d6e4" opacity="0.6"/>
+<!-- old server -->
+<g opacity="0.7" filter="url(#sh)">
+<rect x="430" y="480" width="140" height="220" rx="14" fill="url(#old)"/>
+<use href="#ounit" x="440" y="498"/><use href="#ounit" x="440" y="552"/><use href="#ounit" x="440" y="606"/>
+</g>
+<!-- arrows -->
+<path d="M580 560 C630 520 650 520 680 520" fill="none" stroke="url(#arr)" stroke-width="5" stroke-dasharray="14 10" stroke-linecap="round"/>
+<path d="M580 600 C630 600 650 590 680 590" fill="none" stroke="url(#arr)" stroke-width="5" stroke-dasharray="14 10" stroke-linecap="round"/>
+<path d="M580 640 C630 680 650 660 680 660" fill="none" stroke="url(#arr)" stroke-width="5" stroke-dasharray="14 10" stroke-linecap="round"/>
+<use href="#chev" x="682" y="520"/><use href="#chev" x="682" y="590"/><use href="#chev" x="682" y="660"/>
+<!-- new server -->
+<g filter="url(#sh)">
+<rect x="690" y="400" width="220" height="320" rx="22" fill="url(#srv)"/>
+<use href="#unit" x="700" y="418"/><use href="#unit" x="700" y="500"/><use href="#unit" x="700" y="582"/>
+<rect x="760" y="666" width="80" height="8" rx="4" fill="#7fa9d6"/>
+</g>
+<!-- dashboard -->
+<g filter="url(#sh)">
+<rect x="650" y="170" width="300" height="200" rx="18" fill="#fff"/>
+<rect x="650" y="170" width="300" height="34" rx="18" fill="#cfe3f7"/>
+<rect x="650" y="188" width="300" height="16" fill="#cfe3f7"/>
+<circle cx="672" cy="187" r="6" fill="#f29a2e"/><circle cx="692" cy="187" r="6" fill="#2bb5a8"/><circle cx="712" cy="187" r="6" fill="#7fa9d6"/>
+<rect x="675" y="290" width="20" height="55" rx="5" fill="#7fa9d6"/>
+<rect x="705" y="260" width="20" height="85" rx="5" fill="#4d8fd1"/>
+<rect x="735" y="275" width="20" height="70" rx="5" fill="#2bb5a8"/>
+<rect x="765" y="235" width="20" height="110" rx="5" fill="#f29a2e"/>
+<polyline points="810,320 845,290 875,305 905,250 930,235" fill="none" stroke="#4d8fd1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="905" cy="250" r="6" fill="#2bb5a8"/>
+<line x1="810" y1="345" x2="930" y2="345" stroke="#dbe9f7" stroke-width="3"/>
+</g>
+<!-- database -->
+<use href="#badge" x="300" y="260"/>
+<g fill="#4d8fd1"><rect x="270" y="236" width="60" height="50" fill="#7fa9d6"/><ellipse cx="300" cy="286" rx="30" ry="10" fill="#7fa9d6"/><ellipse cx="300" cy="261" rx="30" ry="10" fill="#9cc3ea"/><ellipse cx="300" cy="236" rx="30" ry="10" fill="#cfe3f7" stroke="#4d8fd1" stroke-width="3"/></g>
+<!-- padlock -->
+<use href="#badge" x="300" y="560"/>
+<path d="M283 555 v-14 a17 17 0 0 1 34 0 v14" fill="none" stroke="#b5762a" stroke-width="6"/>
+<rect x="272" y="553" width="56" height="42" rx="8" fill="url(#gold)"/>
+<circle cx="300" cy="570" r="5" fill="#8a5a1e"/><rect x="298" y="572" width="4" height="12" fill="#8a5a1e"/>
+<g fill="#2bb5a8"><circle cx="338" cy="598" r="9"/><rect x="345" y="595" width="22" height="6" rx="3"/><rect x="358" y="600" width="5" height="8" rx="2"/></g>
+<!-- gear -->
+<use href="#badge" x="1300" y="260"/>
+<g transform="translate(1300 260)" fill="#4d8fd1">
+<rect x="-7" y="-36" width="14" height="72" rx="3"/><rect x="-7" y="-36" width="14" height="72" rx="3" transform="rotate(45)"/><rect x="-7" y="-36" width="14" height="72" rx="3" transform="rotate(90)"/><rect x="-7" y="-36" width="14" height="72" rx="3" transform="rotate(135)"/>
+<circle r="26"/><circle r="11" fill="#fff"/></g>
+<!-- folder tree -->
+<use href="#badge" x="1300" y="560"/>
+<g stroke="#7fa9d6" stroke-width="4" fill="none"><path d="M1278 552 v30 h22 M1278 568 h22"/></g>
+<path d="M1262 530 h12 l5 6 h14 v16 h-31z" fill="#f29a2e"/>
+<path d="M1300 560 h9 l4 5 h12 v12 h-25z" fill="#4d8fd1"/>
+<path d="M1300 576 h9 l4 5 h12 v12 h-25z" fill="#2bb5a8"/>
+<!-- user badge -->
+<use href="#badge" x="560" y="270"/>
+<rect x="530" y="242" width="60" height="58" rx="10" fill="#cfe3f7" stroke="#4d8fd1" stroke-width="3"/>
+<rect x="550" y="236" width="20" height="10" rx="4" fill="#4d8fd1"/>
+<circle cx="560" cy="264" r="10" fill="#4d8fd1"/>
+<path d="M542 292 a18 14 0 0 1 36 0z" fill="#2bb5a8"/>
+<!-- palette -->
+<use href="#badge" x="1040" y="270"/>
+<path d="M1040 240 c-24 0 -36 16 -36 32 c0 18 16 28 30 28 c8 0 8 -8 4 -12 c-4 -5 0 -10 6 -10 h10 c12 0 22 -6 22 -18 c0 -12 -14 -20 -36 -20z" fill="#e9d3b3" stroke="#c9a77a" stroke-width="3"/>
+<circle cx="1022" cy="268" r="6" fill="#4d8fd1"/><circle cx="1034" cy="254" r="6" fill="#2bb5a8"/><circle cx="1052" cy="254" r="6" fill="#f29a2e"/><circle cx="1064" cy="268" r="5" fill="#7fa9d6"/>
+<g fill="#9cc3ea" opacity="0.7"><circle cx="1150" cy="420" r="6"/><circle cx="450" cy="420" r="6"/><circle cx="1180" cy="700" r="8"/><circle cx="420" cy="180" r="5"/></g>
+</svg>
