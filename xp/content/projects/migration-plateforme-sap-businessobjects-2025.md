@@ -1,13 +1,13 @@
 ---
 title: 'Migration d''une plateforme décisionnelle vers SAP BusinessObjects 2025'
-summary: "Installation, dimensionnement, sécurisation et personnalisation d'une nouvelle plateforme SAP BusinessObjects BI 2025, réalisées en mission de conseil pour remplacer une plateforme 4.3 en production."
+summary: "Installation, dimensionnement, sécurisation et personnalisation d'une nouvelle plateforme SAP BusinessObjects BI 2025, réalisées en mission de conseil pour remplacer une plateforme SAP 4.3 en production."
 featured: false
 date: '2026-10-02T00:00:00+02:00'
 draft: false
 slug: migration-sap-bo-2025
-tags: ["sap-businessobjects", "business-intelligence", "migration", "architecture", "securite", "database", "integration-de-donnees", "ldap", "windows-server", "tomcat"]
+tags: ["sap", "businessobjects", "bo", "business-intelligence", "bi", "migration", "architecture", "securite", "database", "java", "ldaps", "windows-server", "tomcat"]
 cover: "images/migration-sap-bo-2025.svg"
-link: ""
+link: "https://www.sap.com/france/products/data-cloud/bi-platform.html"
 status: "completed" # Options: completed, in_progress, planning
 ---
 
@@ -19,7 +19,7 @@ La mission couvrait l'installation d'une nouvelle plateforme, son paramétrage, 
 
 ## Ma mission
 
-* Installer et configurer la plateforme SAP BusinessObjects BI 2025 sur une machine virtuelle Windows dédiée.
+* Installer et configurer la plateforme SAP BusinessObjects BI 2025 sur plusieurs machines virtuelles (Windows Serveur) dédiées (4 structures avec plusieurs environnements).
 * Dimensionner les services serveurs, en lien avec l'éditeur.
 * Migrer les connexions aux sources de données et les contenus (droits, utilisateurs, univers, documents, planifications).
 * Renforcer la sécurité de la plateforme et intégrer l'authentification à l'annuaire.
@@ -42,12 +42,12 @@ J'ai retenu une installation **personnalisée** : packs de langue limités au fr
 
 ### Préparation du serveur
 
-* Désactivation des mises à jour Windows automatiques pour garantir la **stabilité du service**.
+* Désactivation de services automatiques pour garantir la **stabilité du service**.
 * Installation des pilotes ODBC puis migration des sources de données par **export/import de la clé de registre ODBC**, en ne conservant que les connexions aux bases externes et en écartant celles propres à la plateforme (audit, CMS).
 
 ### Dimensionnement
 
-L'assistant de configuration a permis de répartir les services sur plusieurs serveurs de traitement adaptatif (profil **XL**, 11 serveurs, 40 à 60 Go de RAM). Le **dimensionnement avancé**, validé avec l'éditeur sur un serveur de 64 Go, a consisté à ajuster la mémoire Java de chaque service : 2 Go pour la connectivité, le cœur et la gestion des promotions, 4 Go pour la visualisation, 8 Go pour le pont Web Intelligence, et la création d'un serveur dédié au service de jetons de sécurité. J'ai aussi désactivé la surveillance Web Intelligence sur les services concernés et relevé les limites du moteur Web Intelligence (listes de valeurs, tris personnalisés).
+L'assistant de configuration a permis de répartir les services sur plusieurs serveurs de traitement adaptatif (profil **XL**, 11 serveurs, 40 à 60 Go de RAM). Le **dimensionnement avancé**, validé avec l'éditeur SAP sur un serveur de 64 Go, a consisté à ajuster la mémoire Java de chaque service : 2 Go pour la connectivité, le cœur et la gestion des promotions, 4 Go pour la visualisation, 8 Go pour le pont Web Intelligence, et la création d'un serveur dédié au service de jetons de sécurité. J'ai aussi désactivé la surveillance Web Intelligence sur les services concernés et relevé les limites du moteur Web Intelligence (listes de valeurs, tris personnalisés).
 
 Les réglages applicatifs ont complété ce travail : répertoire temporaire dédié aux archives de promotion, destinations e-mail et système de fichiers pour les planifications, indexation de la recherche, purge automatique de la corbeille à 5 jours et rétention des événements d'audit à 180 jours.
 
@@ -64,7 +64,7 @@ La gestion des promotions ne se prête pas à une procédure figée. J'ai donc d
 
 ### Personnalisation
 
-Les pages de connexion du BI launch pad, d'OpenDocument et de la CMC proposent désormais **LDAP par défaut** et masquent le champ système. Le thème de l'établissement (logo et couleurs) est appliqué au BI launch pad et à OpenDocument par la méthode éditeur. Chaque opération est précédée d'une **sauvegarde** et accompagnée d'une procédure de contrôle et de retour arrière.
+Les pages de connexion du BI launch pad, d'OpenDocument et de la CMC proposent désormais **LDAPS par défaut** et masquent le champ système. Le thème de l'établissement (logo et couleurs) est appliqué au BI launch pad et à OpenDocument par la méthode éditeur. Chaque opération est précédée d'une **sauvegarde** et accompagnée d'une procédure de contrôle et de retour arrière.
 
 ## Retour d'expérience
 
