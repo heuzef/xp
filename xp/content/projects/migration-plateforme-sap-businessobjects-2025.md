@@ -1,14 +1,15 @@
 ---
 title: 'Migration d''une plateforme décisionnelle vers SAP BusinessObjects 2025'
-summary: "Installation, dimensionnement, sécurisation et personnalisation d'une nouvelle plateforme SAP BusinessObjects BI 2025, réalisées en mission de conseil pour remplacer une plateforme SAP 4.3 en production."
+summary: "Installation, dimensionnement, sécurisation et personnalisation d'une nouvelle plateforme SAP BusinessObjects BI 2025, réalisées en mission de conseil pour remplacer une plateforme SAP 4.3 en production, jusqu'à sa mise en production et son raccordement à une base MongoDB."
 featured: false
 date: '2026-10-02T00:00:00+02:00'
 draft: false
 slug: migration-sap-bo-2025
-tags: ["sap", "businessobjects", "bo", "business-intelligence", "bi", "migration", "architecture", "securite", "database", "java", "ldaps", "windows-server", "tomcat"]
+tags: ["sap", "businessobjects", "bo", "business-intelligence", "bi", "migration", "architecture", "securite", "database", "java", "ldaps", "windows-server", "tomcat", "mongodb", "odbc", "powershell"]
 cover: "images/migration-sap-bo-2025.svg"
 link: "https://www.sap.com/france/products/data-cloud/bi-platform.html"
 status: "completed" # Options: completed, in_progress, planning
+mermaid: true # charts
 ---
 
 ## Contexte
@@ -17,6 +18,8 @@ Un établissement d'enseignement supérieur a confié à la société de conseil
 
 La mission couvrait l'installation d'une nouvelle plateforme, son paramétrage, l'optimisation de l'outil mis en production avec l'appui de l'éditeur, puis la migration des contenus depuis l'ancien serveur. Le livrable principal est une procédure d'installation et d'exploitation détaillée, pensée pour être rejouée par les équipes internes.
 
+La mise en production a ensuite soulevé deux sujets qui sortaient du cadre d'une installation standard : **raccorder BusinessObjects à une application métier dont les données sont stockées dans MongoDB**, alors que l'outil ne consomme que des sources relationnelles via ODBC, et **corriger directement le référentiel du CMS** lorsque la console d'administration ne suffit plus, par exemple quand le compte Administrator a perdu ses droits sur une application et que celle-ci n'est plus visible.
+
 ## Ma mission
 
 * Installer et configurer la plateforme SAP BusinessObjects BI 2025 sur plusieurs machines virtuelles (Windows Serveur) dédiées (4 structures avec plusieurs environnements).
@@ -24,15 +27,18 @@ La mission couvrait l'installation d'une nouvelle plateforme, son paramétrage, 
 * Migrer les connexions aux sources de données et les contenus (droits, utilisateurs, univers, documents, planifications).
 * Renforcer la sécurité de la plateforme et intégrer l'authentification à l'annuaire.
 * Personnaliser les pages de connexion et le thème graphique aux couleurs de l'établissement.
+* Raccorder la plateforme à une base MongoDB et outiller le diagnostic de la chaîne de connexion.
+* Documenter la correction bas niveau du référentiel du CMS, avec ses garde-fous.
 * Rédiger la documentation d'installation, d'exploitation et de retour arrière.
 
 ## Stack technique
 
-* **SAP BusinessObjects BI Platform 2025** (Patch 12) : CMC, BI launch pad (Fiori), Web Intelligence, OpenDocument, gestion des promotions
+* **SAP BusinessObjects BI Platform 2025** (Patch 12) : CMC, BI launch pad (Fiori), Web Intelligence, OpenDocument, gestion des promotions, Query Builder, Information Design Tool, SIA et CCM
 * **Windows Server** sur machine virtuelle, avec Apache **Tomcat** intégré et base **SQL Anywhere** pour le référentiel et l'audit
 * Pilotes **ODBC** : MySQL, MariaDB, PostgreSQL, MongoDB, Microsoft SQL Server, ainsi qu'un client **Oracle 19c**
+* **MongoDB 4.4** en instance autonome, exposée à BusinessObjects par le **BI Connector 2.14** (`mongosqld`) et le **pilote ODBC MongoDB** 64 bits
 * **LDAPS** pour l'authentification, certificats importés dans le magasin de confiance de la JVM SAP avec `keytool`
-* **PowerShell**, 7-Zip et Theme Designer pour l'outillage et la personnalisation
+* **PowerShell** (5.1 et 7+), 7-Zip et Theme Designer pour l'outillage, la personnalisation et les tests de connectivité
 
 ## Démarche
 
@@ -66,6 +72,32 @@ La gestion des promotions ne se prête pas à une procédure figée. J'ai donc d
 
 Les pages de connexion du BI launch pad, d'OpenDocument et de la CMC proposent désormais **LDAPS par défaut** et masquent le champ système. Le thème de l'établissement (logo et couleurs) est appliqué au BI launch pad et à OpenDocument par la méthode éditeur. Chaque opération est précédée d'une **sauvegarde** et accompagnée d'une procédure de contrôle et de retour arrière.
 
+### Raccordement à une base MongoDB
+
+Le point de départ était un constat simple : le pilote ODBC MongoDB parle le **protocole MySQL** et ne peut donc pas dialoguer directement avec une base MongoDB. La solution a consisté à intercaler le **BI Connector**, un relais qui se présente comme un serveur MySQL 5.7 et traduit le SQL en requêtes MongoDB.
+
+```mermaid
+flowchart LR
+    A[SAP BusinessObjects BI 2025] -->|DSN ODBC 64 bits - protocole MySQL| B[Relais mongosqld - BI Connector - localhost:3307]
+    B -->|protocole MongoDB natif| C[(Base MongoDB 4.4)]
+```
+
+J'ai procédé par couches, en validant chacune avant de passer à la suivante : ouverture du port MongoDB depuis le serveur BO, envoi d'une commande `isMaster` en protocole natif sans aucun pilote installé, connexion avec le compte de service et liste des collections, configuration de `mongosqld` (écoute locale, authentification, échantillonnage du schéma) puis installation en **service Windows** à démarrage automatique avec relance en cas d'échec, et enfin création du DSN 64 bits pointant vers le relais.
+
+Deux scripts PowerShell accompagnent la procédure. Le premier teste MongoDB **sans aucun pilote installé** : il ouvre une socket TCP, négocie TLS en option, construit à la main un message `OP_MSG` contenant un document BSON `isMaster`, puis décode la réponse ; chaque type d'échec (TCP, TLS, coupure) renvoie une piste de correction. Le second vérifie l'architecture de PowerShell et la présence du DSN, ouvre la connexion ODBC et compte les tables visibles.
+
+La base répond correctement au test protocolaire (`ok = 1`, `maxWireVersion = 9`), ce qui confirme une version **MongoDB 4.4**, et le compte de service accède à ses **114 collections**. La procédure prévoit une variante pour brancher plusieurs bases MongoDB sur des ports et des DSN distincts.
+
+### Correction du référentiel par le mode console du CMS
+
+Depuis les correctifs récents de BI 2025, le **mode console du CMS** doit être explicitement autorisé par un administrateur, pour une **durée limitée** et une **liste fermée de commandes**. J'ai documenté la procédure complète en m'appuyant sur la note SAP KBA 1828536, illustrée sur un cas réel : la restauration du contrôle total de l'Administrator sur l'Information Design Tool.
+
+* prérequis : **snapshot de la VM** et sauvegarde des dépôts de fichiers, avant toute intervention ;
+* récupération des identifiants des objets et des rôles via des requêtes du **Query Builder** ;
+* autorisation temporaire du mode console, limitée aux seules commandes nécessaires ;
+* arrêt du SIA, démarrage du CMS en mode console, exécution de la commande `setrole` ;
+* redémarrage du SIA et vérification dans la CMC.
+
 ## Retour d'expérience
 
 * La version 2025 change plusieurs habitudes : plus de dépendance à une installation Java séparée, disparition du conteneur d'applications web, et le fichier de surcharge du BI launch pad est désormais `FioriBI.properties`.
@@ -74,7 +106,14 @@ Les pages de connexion du BI launch pad, d'OpenDocument et de la CMC proposent d
 * La propriété d'activation du thème n'est pas documentée pour OpenDocument : je l'ai vérifiée directement dans le code de l'archive applicative avant de m'appuyer dessus.
 * Un patch SAP écrase les archives contenant le thème. La procédure prévoit donc de réappliquer la personnalisation après chaque mise à jour.
 * Le redémarrage de Tomcat après purge de son cache prend environ une heure, ce qu'il faut anticiper dans les fenêtres d'intervention.
+* **Diagnostiquer couche par couche** fait gagner beaucoup de temps. Par exemple, `mysql.exe` ne permet pas de tester MongoDB : sur le port MongoDB, il reste bloqué sur l'erreur 2013, ce qui peut faire croire à tort à un problème réseau.
+* Les **identifiants SI_ID varient d'un environnement à l'autre**. Seul le CUID est stable, et une procédure multi-environnements doit en tenir compte.
+* Le mode console permet d'outrepasser la CMC mais peut **corrompre le référentiel de façon irréversible**. Il est réservé aux cas sans alternative, idéalement avec le support SAP et toujours après un snapshot.
+* Le BI Connector n'est qu'une **solution de transition** : son support et celui de MongoDB 4.4 arrivent à terme, et son usage au-delà du développement, du test et de l'évaluation suppose une souscription MongoDB Enterprise Advanced. J'ai donc recommandé de définir une cible durable, une interface SQL supportée ou un pilote ODBC tiers maintenu.
 
 ## Ressources
 
 * [Documentation SAP sur l'import de certificats dans la plateforme BI](https://help.sap.com/docs/SUPPORT_CONTENT/bobjip/3519323954.html)
+* [Documentation du MongoDB BI Connector](https://www.mongodb.com/docs/bi-connector/current/)
+* [Référence de `mongosqld`](https://www.mongodb.com/docs/bi-connector/current/reference/mongosqld/)
+* Notes SAP KBA 1828536 (mode console du CMS) et 3764463, accessibles depuis le portail SAP ONE Support.
