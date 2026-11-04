@@ -1,7 +1,7 @@
 ---
 title: 'Migration d''une plateforme décisionnelle vers SAP BusinessObjects 2025'
 summary: "Installation, dimensionnement, sécurisation et personnalisation d'une nouvelle plateforme SAP BusinessObjects BI 2025, réalisées en mission de conseil pour remplacer une plateforme SAP 4.3 en production, jusqu'à sa mise en production et son raccordement à une base MongoDB."
-featured: false
+featured: true
 date: '2026-10-02T00:00:00+02:00'
 draft: false
 slug: migration-sap-bo-2025
